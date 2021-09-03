@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>STM32-SysTick-系统定时器 | 洪荒部落</title><meta name="keywords" content="STM32 SysTick 中断 定时器"><meta name="author" content="重明"><meta name="copyright" content="重明"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="SysTick—系统定时器SysTick 简介SysTick—系统定时器是属于 CM4 内核中的一个外设，内嵌在 NVIC 中。系统定时器是一个 24bit的向下递减的计数器，计数器每计数一次的时间为 1&#x2F;SYSCLK，一般我们设置系统时钟 SYSCLK等于 180M。当重装载数值寄存器的值递减到 0 的时候，系统定时器就产生一次中断，以此循环往复。因为 SysTick 是属于 CM4 内核的外设">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STM32-SysTick-系统定时器">
+<meta property="og:url" content="https://kkkiiinnn.cn/archives/f0615bf0.html">
+<meta property="og:site_name" content="洪荒部落">
+<meta property="og:description" content="SysTick—系统定时器SysTick 简介SysTick—系统定时器是属于 CM4 内核中的一个外设，内嵌在 NVIC 中。系统定时器是一个 24bit的向下递减的计数器，计数器每计数一次的时间为 1&#x2F;SYSCLK，一般我们设置系统时钟 SYSCLK等于 180M。当重装载数值寄存器的值递减到 0 的时候，系统定时器就产生一次中断，以此循环往复。因为 SysTick 是属于 CM4 内核的外设">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_systick.png">
+<meta property="article:published_time" content="2021-05-26T14:47:22.000Z">
+<meta property="article:modified_time" content="2021-08-30T14:10:45.908Z">
+<meta property="article:author" content="重明">
+<meta property="article:tag" content="STM32 SysTick 中断 定时器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_systick.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kkkiiinnn.cn/archives/f0615bf0"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'STM32-SysTick-系统定时器',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-30 22:10:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_systick.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">洪荒部落</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">STM32-SysTick-系统定时器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-26T14:47:22.000Z" title="发表于 2021-05-26 22:47:22">2021-05-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-30T14:10:45.908Z" title="更新于 2021-08-30 22:10:45">2021-08-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="STM32-SysTick-系统定时器"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="SysTick—系统定时器"><a href="#SysTick—系统定时器" class="headerlink" title="SysTick—系统定时器"></a>SysTick—系统定时器</h1><h2 id="SysTick-简介"><a href="#SysTick-简介" class="headerlink" title="SysTick 简介"></a>SysTick 简介</h2><p>SysTick—系统定时器是属于 CM4 内核中的一个外设，内嵌在 NVIC 中。系统定时器是一个 24bit<br>的向下递减的计数器，计数器每计数一次的时间为 1/SYSCLK，一般我们设置系统时钟 SYSCLK<br>等于 180M。当重装载数值寄存器的值递减到 0 的时候，系统定时器就产生一次中断，以此循环<br>往复。<br>因为 SysTick 是属于 CM4 内核的外设，所以所有基于 CM4 内核的单片机都具有这个系统定时器，<br>使得软件在 CM4 单片机中可以很容易的移植。系统定时器一般用于操作系统，用于产生时基，维<br>持操作系统的心跳。  </p>
+<h2 id="SysTick-定时实验"><a href="#SysTick-定时实验" class="headerlink" title="SysTick 定时实验"></a>SysTick 定时实验</h2><p>1、设置重装载寄存器的值<br>2、清除当前数值寄存器的值<br>3、配置控制与状态寄存器  </p>
+<h3 id="SysTick-初始化函数"><a href="#SysTick-初始化函数" class="headerlink" title="SysTick 初始化函数"></a>SysTick 初始化函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void SysTick_Init(void)</span><br><span class="line">&#123;</span><br><span class="line">	if (SysTick_Config(SystemCoreClock / 100000))</span><br><span class="line">	&#123; </span><br><span class="line">		while (1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="SysTick-中断时间的计算"><a href="#SysTick-中断时间的计算" class="headerlink" title="SysTick 中断时间的计算"></a>SysTick 中断时间的计算</h3><p>SysTick 定时器的计数器是向下递减计数的，计数一次的时间 TDEC=1/CLKAHB，当重装载寄存器<br>中的值 VALUELOAD 减到 0 的时候，产生中断，可知中断一次的时间 TINT=VALUELOAD* TDEC 中断<br>= VALUELOAD/CLKAHB，其中 CLKAHB =168MHZ。如果 VALUELOAD 设置为 180，那中断一次的时<br>间 TINT=168/168M=1us。不过 1us 的中断没啥意义，整个程序的重心都花在进出中断上了，根本<br>没有时间处理其他的任务。  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SysTick_Config(SystemCoreClock / 100000))</span><br></pre></td></tr></table></figure>
+
+<p>SysTick_Config（）的形我们配置为 SystemCoreClock / 100000=180M/100000=1680，从刚刚分析我们知道这个形参的值最终是写到重装载寄存器 LOAD 中的，从而可知我们现在把 SysTick 定时器<br>中断一次的时间 TINT=1680/168M=10us。  </p>
+<h3 id="SysTick-定时时间的计算"><a href="#SysTick-定时时间的计算" class="headerlink" title="SysTick 定时时间的计算"></a>SysTick 定时时间的计算</h3><p>当设置好中断时间 TINT 后，我们可以设置一个变量 t，用来记录进入中断的次数，那么变量 t 乘<br>以中断的时间 TINT 就可以计算出需要定时的时间。  </p>
+<h3 id="SysTick-定时函数"><a href="#SysTick-定时函数" class="headerlink" title="SysTick 定时函数"></a>SysTick 定时函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void Delay_us(__IO u32 nTime)</span><br><span class="line">&#123; </span><br><span class="line">	TimingDelay = nTime;	</span><br><span class="line"></span><br><span class="line">	while(TimingDelay != 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>函数 Delay_us() 中我们等待 TimingDelay 为 0，当 TimingDelay 为 0 的时候表示延时时间到。变量<br>TimingDelay 在中断函数中递减，即 SysTick 每进一次中断即 10us 的时间 TimingDelay 递减一次。  </p>
+<h3 id="SysTick-中断服务函数"><a href="#SysTick-中断服务函数" class="headerlink" title="SysTick 中断服务函数"></a>SysTick 中断服务函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void SysTick_Handler(void)</span><br><span class="line">&#123;</span><br><span class="line">	TimingDelay_Decrement();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>中断复位函数调用了另外一个函数 TimingDelay_Decrement()，原型如下：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void TimingDelay_Decrement(void)</span><br><span class="line">&#123;</span><br><span class="line">	if (TimingDelay != 0x00)</span><br><span class="line">	&#123; </span><br><span class="line">		TimingDelay--;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>TimingDelay 的值等于延时函数中传进去的 nTime 的值，比如 nTime=100000，则延时的时间等于<br>100000*10us=1s。  </p>
+<h2 id="另外一种更简洁的定时编程"><a href="#另外一种更简洁的定时编程" class="headerlink" title="另外一种更简洁的定时编程"></a>另外一种更简洁的定时编程</h2><p>上面的实验，我们是使用了中断，而且经过多个函数的调用，还使用了全局变量，理解起来挺费<br>劲的，其实还有另外一种更简洁的写法。我们知道， systick 的 counter 从 reload 值往下递减到 0 的<br>时候， CTRL 寄存器的位 16:countflag 会置 1，且读取该位的值可清 0，所有我们可以使用软件查<br>询的方法来实现延时。  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void SysTick_Delay_Us( __IO uint32_t us)</span><br><span class="line">&#123;</span><br><span class="line">   uint32_t i;</span><br><span class="line">   SysTick_Config(SystemCoreClock/1000000);</span><br><span class="line">   for (i=0; i&lt;us; i++) &#123;</span><br><span class="line">      // 当计数器的值减小到 0 的时候， CRTL 寄存器的位 16 会置 1</span><br><span class="line">      while ( !((SysTick-&gt;CTRL)&amp;(1&lt;&lt;16)) );</span><br><span class="line">   &#125;</span><br><span class="line">   // 关闭 SysTick 定时器</span><br><span class="line">   SysTick-&gt;CTRL &amp;=~SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void SysTick_Delay_Ms( __IO uint32_t ms)</span><br><span class="line">&#123;</span><br><span class="line">	uint32_t i;</span><br><span class="line">	SysTick_Config(SystemCoreClock/1000);</span><br><span class="line">	</span><br><span class="line">	for (i=0; i&lt;ms; i++) &#123;</span><br><span class="line">		// 当计数器的值减小到 0 的时候， CRTL 寄存器的位 16 会置 1</span><br><span class="line">		// 当置 1 时，读取该位会清 0</span><br><span class="line">		while ( !((SysTick-&gt;CTRL)&amp;(1&lt;&lt;16)) );</span><br><span class="line">	&#125;</span><br><span class="line">	// 关闭 SysTick 定时器</span><br><span class="line">    SysTick-&gt;CTRL &amp;=~ SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在这两个微秒和毫秒级别的延时函数中，我们还是调用了 SysTick_Config 这个固件库函数 ，其中 SystemCoreClock 是一个宏，大小为 168000000，如果不想使用这个宏，也可以直接改成数字。  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 这个 固件库函数 在 core_cm3.h 中</span><br><span class="line">static __INLINE uint32_t SysTick_Config(uint32_t ticks)</span><br><span class="line">&#123;</span><br><span class="line">	// reload 寄存器为 24bit，最大值为 2^24</span><br><span class="line">	if (ticks &gt; SysTick_LOAD_RELOAD_Msk) return (1);</span><br><span class="line">	</span><br><span class="line">	// 配置 reload 寄存器的初始值</span><br><span class="line">	SysTick-&gt;LOAD = (ticks &amp; SysTick_LOAD_RELOAD_Msk) - 1;</span><br><span class="line">	</span><br><span class="line">	// 配置中断优先级为 1&lt;&lt;4 -1 = 15，优先级为最低</span><br><span class="line">	NVIC_SetPriority (SysTick_IRQn, (1&lt;&lt;__NVIC_PRIO_BITS) - 1);</span><br><span class="line">	</span><br><span class="line">	// 配置 counter 计数器的值</span><br><span class="line">	SysTick-&gt;VAL = 0;</span><br><span class="line">	// 配置 systick 的时钟为 72M</span><br><span class="line">	// 使能中断</span><br><span class="line">	// 使能 systick</span><br><span class="line">	SysTick-&gt;CTRL = SysTick_CTRL_CLKSOURCE_Msk |</span><br><span class="line">					SysTick_CTRL_TICKINT_Msk |</span><br><span class="line">					SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">	return (0);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">重明</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kkkiiinnn.cn/archives/f0615bf0.html">https://kkkiiinnn.cn/archives/f0615bf0.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kkkiiinnn.cn" target="_blank">洪荒部落</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/STM32-SysTick-%E4%B8%AD%E6%96%AD-%E5%AE%9A%E6%97%B6%E5%99%A8/">STM32 SysTick 中断 定时器</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_systick.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/archives/fa6dc41a.html"><img class="next-cover" src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_exti.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">STM32中断应用概览</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">重明</div><div class="author-info__description">永远相信美好的事情即将发生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KKKIIINNN"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/KKKIIINNN" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:211560569@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SysTick%E2%80%94%E7%B3%BB%E7%BB%9F%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">SysTick—系统定时器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SysTick-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">SysTick 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SysTick-%E5%AE%9A%E6%97%B6%E5%AE%9E%E9%AA%8C"><span class="toc-number">1.2.</span> <span class="toc-text">SysTick 定时实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SysTick-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text">SysTick 初始化函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SysTick-%E4%B8%AD%E6%96%AD%E6%97%B6%E9%97%B4%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.2.2.</span> <span class="toc-text">SysTick 中断时间的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SysTick-%E5%AE%9A%E6%97%B6%E6%97%B6%E9%97%B4%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.2.3.</span> <span class="toc-text">SysTick 定时时间的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SysTick-%E5%AE%9A%E6%97%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.4.</span> <span class="toc-text">SysTick 定时函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SysTick-%E4%B8%AD%E6%96%AD%E6%9C%8D%E5%8A%A1%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">SysTick 中断服务函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%A6%E5%A4%96%E4%B8%80%E7%A7%8D%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%E5%AE%9A%E6%97%B6%E7%BC%96%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">另外一种更简洁的定时编程</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_systick.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32-SysTick-系统定时器"/></a><div class="content"><a class="title" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器">STM32-SysTick-系统定时器</a><time datetime="2021-05-26T14:47:22.000Z" title="发表于 2021-05-26 22:47:22">2021-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/fa6dc41a.html" title="STM32中断应用概览"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_exti.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32中断应用概览"/></a><div class="content"><a class="title" href="/archives/fa6dc41a.html" title="STM32中断应用概览">STM32中断应用概览</a><time datetime="2021-05-25T13:11:51.000Z" title="发表于 2021-05-25 21:11:51">2021-05-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WSL+Terminus打造Windows终端"/></a><div class="content"><a class="title" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端">WSL+Terminus打造Windows终端</a><time datetime="2021-03-03T04:08:41.000Z" title="发表于 2021-03-03 12:08:41">2021-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/d1527295.html" title="小米10官方历史刷机包整合"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/Mi4-post.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米10官方历史刷机包整合"/></a><div class="content"><a class="title" href="/archives/d1527295.html" title="小米10官方历史刷机包整合">小米10官方历史刷机包整合</a><time datetime="2021-02-23T09:58:56.000Z" title="发表于 2021-02-23 17:58:56">2021-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/55fb420e.html" title="小米4官方历史刷机包整合"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/Mi4-post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米4官方历史刷机包整合"/></a><div class="content"><a class="title" href="/archives/55fb420e.html" title="小米4官方历史刷机包整合">小米4官方历史刷机包整合</a><time datetime="2021-02-23T08:35:01.000Z" title="发表于 2021-02-23 16:35:01">2021-02-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By 重明</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/"><span>皖ICP备2020014766号-1</span></a><br/><a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34012402000325"><img class="icp-icon" src="/img/icp.png"><span>皖公网安备 34012402000325号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body></html>

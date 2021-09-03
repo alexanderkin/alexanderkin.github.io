@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASUS-FL8000UQ黑苹果 | 洪荒部落</title><meta name="keywords" content="黑苹果 EFI 教程"><meta name="author" content="重明"><meta name="copyright" content="重明"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="EFI地址： ASUS-FL8000UQ-HackintoshmacOS Mojave&#x2F;Catalina&#x2F;Big Sur For ASUS-FL8000UQ-HackintoshBIOS设置： 关闭SecureBoot  关闭FastBoot  解锁CFG Lock 1.将U盘格式化为FAT32格式； 2.打开CFG文件夹，将里面的EFI文件复制到U盘中，重启按ESC键选择U盘启动； 3.输入命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASUS-FL8000UQ黑苹果">
+<meta property="og:url" content="https://kkkiiinnn.cn/archives/3851022e.html">
+<meta property="og:site_name" content="洪荒部落">
+<meta property="og:description" content="EFI地址： ASUS-FL8000UQ-HackintoshmacOS Mojave&#x2F;Catalina&#x2F;Big Sur For ASUS-FL8000UQ-HackintoshBIOS设置： 关闭SecureBoot  关闭FastBoot  解锁CFG Lock 1.将U盘格式化为FAT32格式； 2.打开CFG文件夹，将里面的EFI文件复制到U盘中，重启按ESC键选择U盘启动； 3.输入命令">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/A-post.jpg">
+<meta property="article:published_time" content="2020-04-16T08:43:36.000Z">
+<meta property="article:modified_time" content="2021-08-30T14:25:58.926Z">
+<meta property="article:author" content="重明">
+<meta property="article:tag" content="黑苹果 EFI 教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/A-post.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kkkiiinnn.cn/archives/3851022e"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ASUS-FL8000UQ黑苹果',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-30 22:25:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/A-post.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">洪荒部落</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ASUS-FL8000UQ黑苹果</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-04-16T08:43:36.000Z" title="发表于 2020-04-16 16:43:36">2020-04-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-30T14:25:58.926Z" title="更新于 2021-08-30 22:25:58">2021-08-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ASUS-FL8000UQ黑苹果"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="EFI地址：-ASUS-FL8000UQ-Hackintosh"><a href="#EFI地址：-ASUS-FL8000UQ-Hackintosh" class="headerlink" title="EFI地址： ASUS-FL8000UQ-Hackintosh"></a><center>EFI地址： <a target="_blank" rel="noopener" href="https://github.com/KKKIIINNN/ASUS-FL8000UQ-Hackintosh">ASUS-FL8000UQ-Hackintosh</a></center></h1><h1 id="macOS-Mojave-Catalina-Big-Sur-For-ASUS-FL8000UQ-Hackintosh"><a href="#macOS-Mojave-Catalina-Big-Sur-For-ASUS-FL8000UQ-Hackintosh" class="headerlink" title="macOS Mojave/Catalina/Big Sur For ASUS-FL8000UQ-Hackintosh"></a><center>macOS Mojave/Catalina/Big Sur For ASUS-FL8000UQ-Hackintosh</center></h1><h1 id="BIOS设置："><a href="#BIOS设置：" class="headerlink" title="BIOS设置："></a>BIOS设置：</h1><ul>
+<li><p>关闭<code>SecureBoot</code></p>
+</li>
+<li><p>关闭<code>FastBoot</code></p>
+</li>
+<li><p>解锁<code>CFG Lock</code></p>
+<p>1.将U盘格式化为FAT32格式；</p>
+<p>2.打开CFG文件夹，将里面的EFI文件复制到U盘中，重启按ESC键选择U盘启动；</p>
+<p>3.输入命令<code>setup_var_3 0x527 0x00</code>即可解锁CFG Lock。</p>
+</li>
+</ul>
+<h2 id="一、配置："><a href="#一、配置：" class="headerlink" title="一、配置："></a>一、配置：</h2><table>
+<thead>
+<tr>
+<th>配置</th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>处理器</td>
+<td>i7-8550U</td>
+</tr>
+<tr>
+<td>核显</td>
+<td>Intel Graphics UHD620</td>
+</tr>
+<tr>
+<td>独显</td>
+<td>GeForce 940MX（已屏蔽）</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>4G×2 DDR4 2400MHz</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>120G SSD/1T HDD</td>
+</tr>
+<tr>
+<td>声卡</td>
+<td>Realtek ALC294</td>
+</tr>
+<tr>
+<td>无线网卡</td>
+<td>DW1820A-08PKF4</td>
+</tr>
+</tbody></table>
+<p>关于拆机卡<code>BCM943602CS</code>和<code>BCM943602CDP</code>导致在关机状态下拔插电源适配器电脑自动开机的情况，第一种方法是<code>屏蔽拆机卡的第13针脚</code>，屏蔽后即可解决此问题，第二种方法是<code>屏蔽转接卡的第54针和第55针</code>，同样可以解决此问题。推荐使用<code>DW1820A-08PKF4</code>版本，无需屏蔽针脚，稳定运行。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/A-2.png"></p>
+<h2 id="二、正常工作"><a href="#二、正常工作" class="headerlink" title="二、正常工作"></a>二、正常工作</h2><ol>
+<li>CPU变频</li>
+<li>核显硬件加速，独显无法驱动已做屏蔽</li>
+<li>声卡输出（<del>自编译AppleALC驱动</del> 已合并至<a target="_blank" rel="noopener" href="https://github.com/acidanthera/applealc/releases">AppleALC</a>官方项目，<code>LayoutID=66</code>）</li>
+<li>HDMI输出</li>
+<li>USB</li>
+<li>WIFI/蓝牙(已更换DW1820A,原装AR9565可驱动,有需要可去远景论坛查找）</li>
+<li>电量显示正常</li>
+<li>触控板</li>
+<li>睡眠和唤醒</li>
+</ol>
+<h2 id="三、一键开启HIDPI项目地址：-one-key-hidpi"><a href="#三、一键开启HIDPI项目地址：-one-key-hidpi" class="headerlink" title="三、一键开启HIDPI项目地址： one-key-hidpi"></a>三、一键开启HIDPI项目地址： <a target="_blank" rel="noopener" href="https://github.com/xzhih/one-key-hidpi">one-key-hidpi</a></h2><p>macOS Big Sur请使用<a target="_blank" rel="noopener" href="http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1862620&highlight=HIDPI">原版镜像生成ISO文件和一键开启HIDPI</a>来开启HIDPI</p>
+<h2 id="四、关于F5-F12的问题。"><a href="#四、关于F5-F12的问题。" class="headerlink" title="四、关于F5~F12的问题。"></a>四、关于F5~F12的问题。</h2><p>已添加SSDT加载苹果F5~F12按键功能，不再使用Fn组合键。  </p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F5</td>
+<td>Brightness_down</td>
+</tr>
+<tr>
+<td>F6</td>
+<td>Brightness_up</td>
+</tr>
+<tr>
+<td>F7</td>
+<td>Scan Previous Track</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>Play/Pause</td>
+</tr>
+<tr>
+<td>F9</td>
+<td>Scan Next Track</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>Mute</td>
+</tr>
+<tr>
+<td>F11</td>
+<td>Volume_down</td>
+</tr>
+<tr>
+<td>F12</td>
+<td>Volume_up</td>
+</tr>
+</tbody></table>
+<p>如果需要用到这些按键原本的功能的话，可以删除<code>ACPI</code>文件下的<code>SSDT-Fkey.aml</code>,然后使用<code>Karabiner Elements</code>来进行键位调整，这样就能在使用原本功能的同时也支持Mac的功能。</p>
+<h2 id="五、注意事项"><a href="#五、注意事项" class="headerlink" title="五、注意事项"></a>五、注意事项</h2><p>1.<code>BIOS309</code>无法安装的问题已经修复，不需要再在win10里面禁用“更新不包括驱动程序”了。<br>2.安装完成后请使用<code>Hackintool</code>重新<code>定制USB</code>以解决睡眠问题：<a target="_blank" rel="noopener" href="https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html"><code>USB定制教程</code></a><br>3.<code>OpenCore</code>关闭<code>&quot;Msic-&gt;ShowPicker&quot;</code>后可在开机过程中在ASUS标志出来后用alt键来显示启动菜单，笔记本自带键盘需要长按alt键，外接键盘需要不断点按alt键。<br>4.Windows+Mac双系统推荐使用NDK-OpenCore，对windows没有影响。原版OpenCore可能导致<code>windows激活信息丢失</code>。<br>5.macOS Big Sur在安装过程中如果出现内核崩溃情况只需要<code>清理一次NVRAM</code>即可。<br>6.由于现在的OC重命名较多，请<code>尽量不要使用OC引导Windows</code>，否则可能会出现意外情况。<br>7.DW1820A需要先屏蔽针脚，因为EFI文件中如果没有驱动的话会导致进系统禁行，卡顿等，进入系统驱动完成后就可以不用屏蔽针脚了。</p>
+<h2 id="六、HDMI注意事项"><a href="#六、HDMI注意事项" class="headerlink" title="六、HDMI注意事项"></a>六、HDMI注意事项</h2><p>此电脑在<code>BIOS</code>中打开<code>CSM</code>兼容选项就可以在外接显示器中<code>显示BIOS和Clover界面以及开机过程</code>，但如果用外接显示器开机，那么黑苹果内屏将无法使用，但是<code>10.14 Mojave中在clover里加上“igfxcflbklt=1”启动参数</code>，开机后将笔记本盖子合上再打开即可同时使用内外屏，但注意，加上此启动参数后亮度调节将失效。此方法在<code>10.15 Catalina中无效</code>，所以建议10.15 Catalina不要打开CSM兼容模式，用内屏来开机，等黑苹果完全启动即可使用外屏。</p>
+<h2 id="七、关于睡眠过程中自动唤醒解决方案-貌似没啥用"><a href="#七、关于睡眠过程中自动唤醒解决方案-貌似没啥用" class="headerlink" title="## 七、关于睡眠过程中自动唤醒解决方案(貌似没啥用)"></a>## <del>七、关于睡眠过程中自动唤醒解决方案</del>(貌似没啥用)</h2><p>当电脑出现自动唤醒后，打开终端输入<code> log show --last 1d | grep &quot;Wake reason&quot;</code> 找到唤醒电脑的设备，然后在DSDT中搜索对应的设备，将设备下面的<code>_PRW</code>方法注释掉即可。</p>
+<h2 id="八、本机NVRAM在Mac下可以正常使用，不需要再模拟NVRAM。如果使用OpenCore引导，就可以可在偏好设置中使用“启动磁盘”来设置默认启动项。"><a href="#八、本机NVRAM在Mac下可以正常使用，不需要再模拟NVRAM。如果使用OpenCore引导，就可以可在偏好设置中使用“启动磁盘”来设置默认启动项。" class="headerlink" title="八、本机NVRAM在Mac下可以正常使用，不需要再模拟NVRAM。如果使用OpenCore引导，就可以可在偏好设置中使用“启动磁盘”来设置默认启动项。"></a>八、本机NVRAM在Mac下可以正常使用，不需要再模拟NVRAM。如果使用OpenCore引导，就可以可在偏好设置中使用“启动磁盘”来设置默认启动项。</h2><p>如何测试是否支持<code>NVRAM</code>:<br>1.终端输入  <code>sudo nvram 1212=1</code>  后重启；<br>2.重启后打开终端输入  <code>nvram -p | grep 1212</code>  ，如果输出<code>1212   1</code>，即<code>NVRAM</code>工作正常，否则不正常；<br>3.测试完后终端输入  <code>sudo nvram -d 1212</code>  来删除自定义变量。</p>
+<h2 id="九、截图"><a href="#九、截图" class="headerlink" title="九、截图"></a>九、截图</h2><p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/A-1.jpg"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">重明</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kkkiiinnn.cn/archives/3851022e.html">https://kkkiiinnn.cn/archives/3851022e.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kkkiiinnn.cn" target="_blank">洪荒部落</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C-EFI-%E6%95%99%E7%A8%8B/">黑苹果 EFI 教程</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/A-post.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/66387254.html"><img class="prev-cover" src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-post.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Windows10安装教程</div></div></a></div><div class="next-post pull-right"><a href="/archives/9447ec3f.html"><img class="next-cover" src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/C-post.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">分别利用Github和Coding来搭建博客</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">重明</div><div class="author-info__description">永远相信美好的事情即将发生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KKKIIINNN"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/KKKIIINNN" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:211560569@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EFI%E5%9C%B0%E5%9D%80%EF%BC%9A-ASUS-FL8000UQ-Hackintosh"><span class="toc-number">1.</span> <span class="toc-text">EFI地址： ASUS-FL8000UQ-Hackintosh</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#macOS-Mojave-Catalina-Big-Sur-For-ASUS-FL8000UQ-Hackintosh"><span class="toc-number">2.</span> <span class="toc-text">macOS Mojave&#x2F;Catalina&#x2F;Big Sur For ASUS-FL8000UQ-Hackintosh</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BIOS%E8%AE%BE%E7%BD%AE%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">BIOS设置：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">一、配置：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%AD%A3%E5%B8%B8%E5%B7%A5%E4%BD%9C"><span class="toc-number">3.2.</span> <span class="toc-text">二、正常工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%80%E9%94%AE%E5%BC%80%E5%90%AFHIDPI%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80%EF%BC%9A-one-key-hidpi"><span class="toc-number">3.3.</span> <span class="toc-text">三、一键开启HIDPI项目地址： one-key-hidpi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B3%E4%BA%8EF5-F12%E7%9A%84%E9%97%AE%E9%A2%98%E3%80%82"><span class="toc-number">3.4.</span> <span class="toc-text">四、关于F5~F12的问题。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.5.</span> <span class="toc-text">五、注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81HDMI%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.6.</span> <span class="toc-text">六、HDMI注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%85%B3%E4%BA%8E%E7%9D%A1%E7%9C%A0%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%87%AA%E5%8A%A8%E5%94%A4%E9%86%92%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-%E8%B2%8C%E4%BC%BC%E6%B2%A1%E5%95%A5%E7%94%A8"><span class="toc-number">3.7.</span> <span class="toc-text">## 七、关于睡眠过程中自动唤醒解决方案(貌似没啥用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E6%9C%AC%E6%9C%BANVRAM%E5%9C%A8Mac%E4%B8%8B%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A8%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%86%8D%E6%A8%A1%E6%8B%9FNVRAM%E3%80%82%E5%A6%82%E6%9E%9C%E4%BD%BF%E7%94%A8OpenCore%E5%BC%95%E5%AF%BC%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%8F%AF%E5%9C%A8%E5%81%8F%E5%A5%BD%E8%AE%BE%E7%BD%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E2%80%9C%E5%90%AF%E5%8A%A8%E7%A3%81%E7%9B%98%E2%80%9D%E6%9D%A5%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%90%AF%E5%8A%A8%E9%A1%B9%E3%80%82"><span class="toc-number">3.8.</span> <span class="toc-text">八、本机NVRAM在Mac下可以正常使用，不需要再模拟NVRAM。如果使用OpenCore引导，就可以可在偏好设置中使用“启动磁盘”来设置默认启动项。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%88%AA%E5%9B%BE"><span class="toc-number">3.9.</span> <span class="toc-text">九、截图</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_systick.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32-SysTick-系统定时器"/></a><div class="content"><a class="title" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器">STM32-SysTick-系统定时器</a><time datetime="2021-05-26T14:47:22.000Z" title="发表于 2021-05-26 22:47:22">2021-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/fa6dc41a.html" title="STM32中断应用概览"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_exti.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32中断应用概览"/></a><div class="content"><a class="title" href="/archives/fa6dc41a.html" title="STM32中断应用概览">STM32中断应用概览</a><time datetime="2021-05-25T13:11:51.000Z" title="发表于 2021-05-25 21:11:51">2021-05-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WSL+Terminus打造Windows终端"/></a><div class="content"><a class="title" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端">WSL+Terminus打造Windows终端</a><time datetime="2021-03-03T04:08:41.000Z" title="发表于 2021-03-03 12:08:41">2021-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/d1527295.html" title="小米10官方历史刷机包整合"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/Mi4-post.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米10官方历史刷机包整合"/></a><div class="content"><a class="title" href="/archives/d1527295.html" title="小米10官方历史刷机包整合">小米10官方历史刷机包整合</a><time datetime="2021-02-23T09:58:56.000Z" title="发表于 2021-02-23 17:58:56">2021-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/55fb420e.html" title="小米4官方历史刷机包整合"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/Mi4-post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米4官方历史刷机包整合"/></a><div class="content"><a class="title" href="/archives/55fb420e.html" title="小米4官方历史刷机包整合">小米4官方历史刷机包整合</a><time datetime="2021-02-23T08:35:01.000Z" title="发表于 2021-02-23 16:35:01">2021-02-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By 重明</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/"><span>皖ICP备2020014766号-1</span></a><br/><a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34012402000325"><img class="icp-icon" src="/img/icp.png"><span>皖公网安备 34012402000325号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body></html>

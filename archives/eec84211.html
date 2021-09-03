@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>将博客部署到自己的服务器 | 洪荒部落</title><meta name="keywords" content="阿里云 服务器"><meta name="author" content="重明"><meta name="copyright" content="重明"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本教程基于阿里云轻量应用服务器，系统为AliyunLinux一、配置 Git1、安装 git用 Xshell 或其他工具连接到服务器，在命令框输入 1yum install git  等待安装完成。 2、创建 git 账户在命令框输入 1adduser git  3、添加 git 账户权限12chmod 740 &#x2F;etc&#x2F;sudoersvim &#x2F;etc&#x2F;sudoers  按回车之后，进入编辑界面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将博客部署到自己的服务器">
+<meta property="og:url" content="https://kkkiiinnn.cn/archives/eec84211.html">
+<meta property="og:site_name" content="洪荒部落">
+<meta property="og:description" content="本教程基于阿里云轻量应用服务器，系统为AliyunLinux一、配置 Git1、安装 git用 Xshell 或其他工具连接到服务器，在命令框输入 1yum install git  等待安装完成。 2、创建 git 账户在命令框输入 1adduser git  3、添加 git 账户权限12chmod 740 &#x2F;etc&#x2F;sudoersvim &#x2F;etc&#x2F;sudoers  按回车之后，进入编辑界面">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-BG.jpg">
+<meta property="article:published_time" content="2021-01-11T11:56:26.000Z">
+<meta property="article:modified_time" content="2021-08-30T13:58:57.799Z">
+<meta property="article:author" content="重明">
+<meta property="article:tag" content="阿里云 服务器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-BG.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kkkiiinnn.cn/archives/eec84211"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '将博客部署到自己的服务器',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-30 21:58:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-BG.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">洪荒部落</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">将博客部署到自己的服务器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-01-11T11:56:26.000Z" title="发表于 2021-01-11 19:56:26">2021-01-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-30T13:58:57.799Z" title="更新于 2021-08-30 21:58:57">2021-08-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="将博客部署到自己的服务器"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"><a href="#本教程基于阿里云轻量应用服务器，系统为AliyunLinux" class="headerlink" title="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"></a>本教程基于阿里云轻量应用服务器，系统为<code>AliyunLinux</code></h1><h1 id="一、配置-Git"><a href="#一、配置-Git" class="headerlink" title="一、配置 Git"></a>一、配置 Git</h1><h2 id="1、安装-git"><a href="#1、安装-git" class="headerlink" title="1、安装 git"></a>1、安装 git</h2><p>用 <code>Xshell</code> 或其他工具连接到服务器，在命令框输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+
+<p>等待安装完成。</p>
+<h2 id="2、创建-git-账户"><a href="#2、创建-git-账户" class="headerlink" title="2、创建 git 账户"></a>2、创建 git 账户</h2><p>在命令框输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser git</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、添加-git-账户权限"><a href="#3、添加-git-账户权限" class="headerlink" title="3、添加 git 账户权限"></a>3、添加 git 账户权限</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 740 /etc/sudoers</span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<p>按回车之后，进入编辑界面</p>
+<p>先按i键进入编辑模式，然后找到如下内容</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-1.png"></p>
+<p>添加以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git     ALL=(ALL)     ALL</span><br></pre></td></tr></table></figure>
+
+<p>然后按 “<code>Esc</code>” 键，此时最底下的<code>—INSERT—</code>消失，再输入 “<code>:wq</code>”，即保存退出。</p>
+<h2 id="4、改回权限"><a href="#4、改回权限" class="headerlink" title="4、改回权限"></a>4、改回权限</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 400 /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、设置-git-密码"><a href="#5、设置-git-密码" class="headerlink" title="5、设置 git 密码"></a>5、设置 git 密码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd git</span><br></pre></td></tr></table></figure>
+
+<p>输入两次密码就设置成功了。注意，<code>Linux</code>下输入密码是不显示****的，你直接输入，输完回车就行了。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-2.png"></p>
+<h2 id="6、切换至-git-用户，创建-ssh-文件夹和-ssh-authorized-keys-文件，并赋予相应的权限"><a href="#6、切换至-git-用户，创建-ssh-文件夹和-ssh-authorized-keys-文件，并赋予相应的权限" class="headerlink" title="6、切换至 git 用户，创建 ~/.ssh 文件夹和 ~/.ssh/authorized_keys 文件，并赋予相应的权限"></a>6、切换至 git 用户，创建 <code>~/.ssh</code> 文件夹和 <code>~/.ssh/authorized_keys</code> 文件，并赋予相应的权限</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su git</span><br><span class="line">mkdir ~/.ssh</span><br><span class="line">vim ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>按”i”进入编辑模式，将我们在win10中生成的<code>id_rsa.pub</code>文件中的公钥复制到<code>authorized_keys</code>中，按”esc”，然后按”:wq”，保存退出。</p>
+<p>接着，输入一下命令，赋予权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 600 /home/git/.ssh/authorized_keys</span><br><span class="line">chmod 700 /home/git/.ssh</span><br></pre></td></tr></table></figure>
+
+<p>在本地Git终端中测试是否能免密登录git，在本地Git终端中输入以下命令，其中SERVER填写自己的云主机ip，执行输入yes后不用密码说明配置成功了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -v git@你的服务器ip</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、创建仓库目录及相关配置"><a href="#二、创建仓库目录及相关配置" class="headerlink" title="二、创建仓库目录及相关配置"></a>二、创建仓库目录及相关配置</h1><h2 id="1、创建目录"><a href="#1、创建目录" class="headerlink" title="1、创建目录"></a>1、创建目录</h2><p>在<code>var</code>目录下创建<code>repo</code>作为Git仓库目录，返回服务端命令行切换到<code>root</code>账户，然后输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/repo</span><br></pre></td></tr></table></figure>
+
+<p>赋予权限：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown -R git:git /var/repo</span><br><span class="line">chmod -R 755 /var/repo</span><br></pre></td></tr></table></figure>
+
+<p>接下来创建<code>hexo</code>目录作为网站根目录，并赋予权限：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/hexo</span><br><span class="line">chown -R git:git /var/hexo</span><br><span class="line">chmod -R 755 /var/hexo</span><br></pre></td></tr></table></figure>
+
+<p>接下来创建一个空白的<code>git</code>仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /var/repo</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
+
+<p>创建一个新的<code>Git</code>钩子，用于自动部署.</p>
+<p>在 <code>/var/repo/hexo.git</code>下，有一个自动生成的<code>hooks</code>文件夹。我们需要在里边新建一个新的钩子文件 <code>post-receive</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /var/repo/hexo.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<p>进入编辑模式，然后将下面那两行代码粘贴进去，保存退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/var/hexo --git-dir=/var/repo/hexo.git checkout -f</span><br></pre></td></tr></table></figure>
+
+<p>修改权限：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown -R git:git /var/repo/hexo.git/hooks/post-receive</span><br><span class="line">chmod +x /var/repo/hexo.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<p>到这里<code>Git</code>仓库已经搭建完毕了。</p>
+<h2 id="2、配置-Nginx"><a href="#2、配置-Nginx" class="headerlink" title="2、配置 Nginx"></a>2、配置 Nginx</h2><p>为了部署和维护，我们使用宝塔面板来一键部署<code>Nginx</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+
+<p>中途输入”y”回车等待一会就好了。在执行结果最后会出现地址，用户名，密码等。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-3.png"></p>
+<p>复制这个地址打开，输入账号密码即可进入宝塔面板。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-4.png"></p>
+<p>注意：这里也有可能你进不去面板页面，是因为你的服务器没有开<code>8888</code>这个端口（具体看你的宝塔面板连接的端口），去阿里云轻量服务器控制台中的“安全”-&gt;“防火墙”，右上角的”添加规则”，添加相应的端口即可。看下面的第二张图。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-5.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-6.png"></p>
+<p>另外如果忘记了宝塔用户名密码，可以去这里查看解决方案，链接<a target="_blank" rel="noopener" href="https://www.bt.cn/bbs/thread-1172-1-1.html"><code>忘记Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案</code></a></p>
+<p>进入面板之后，会提示叫你修改端口，点击”立即修改”,可以看到”面板端口”这时候是<code>8888</code>，自己选一个值，然后先去服务器防火墙上开放这个端口，跟刚刚的”添加规则”操作一样。</p>
+<p>再回到宝塔面板页面将”面板端口”的值修改成你刚刚开放的端口值。</p>
+<p>然后需要用新端口，重新进入宝塔面板，就是将原有的链接”:”后面的值改成你的端口即可。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-7.png"></p>
+<p>在宝塔面板，进入软件商店，输入”<code>Nginx</code>”，然后搜索，安装免费的那个。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-8.png"></p>
+<p>等待部署完成。</p>
+<p>部署完成之后，点击网站，添加站点，填写你的域名，没有的话写你的服务器ip地址。其他的不要改。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-9.png"></p>
+<p>填写完之后提交，然后点击”设置”</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-10.png"></p>
+<p>点击”配置文件”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    # server_name填写你自己的域名，没有的话填ip</span><br><span class="line">    server_name hjxlog.com;</span><br><span class="line">    index index.php index.html index.htm default.php default.htm default.html;</span><br><span class="line">    # 这里root填写自己的网站根目录，修改为/var/hexo</span><br><span class="line">    root /var/hexo;</span><br></pre></td></tr></table></figure>
+
+<p>保存，然后选择“设置”-“网站目录”，将网站目录修改成以下，保存。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/hexo</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-11.png"></p>
+<p>回到服务器终端，重启宝塔服务，使之生效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service bt restart</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、修改-hexo-配置"><a href="#3、修改-hexo-配置" class="headerlink" title="3、修改 hexo 配置"></a>3、修改 hexo 配置</h2><p>进入本地电脑<code>hexo</code>博客的根目录，编辑<strong>站点配置文件 _config.yml</strong>，找到deploy，修改成以下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #repo改为repo: git@你的服务器IP:/var/repo/hexo.git</span><br><span class="line">  repo: git@47.102.195.112:/var/repo/hexo.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>最后在本地终端中，输入以下命令部署</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+
+<p>这时候可能出现权限问题，导致部署到<code>git</code>失败。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-12.png"></p>
+<p>在服务器终端输入以下命令即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown -R git:git /var/repo/</span><br><span class="line">chown -R git:git /var/hexo/</span><br></pre></td></tr></table></figure>
+
+<p>最后再hexo d -g部署，应该就可以看到部署成功了。</p>
+<p>自此，已经将博客搬到阿里云服务器了。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-13.jpg"></p>
+<h2 id="4、将网站添加-https-访问"><a href="#4、将网站添加-https-访问" class="headerlink" title="4、将网站添加 https 访问"></a>4、将网站添加 https 访问</h2><p>去阿里云申请一个免费的<code>SSL</code>证书，好像要备案，有点忘记了，很快就申请下来了。</p>
+<p>进入宝塔面板，”网站”，”设置”，”<code>SSL</code>“，”其他证书”</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-14.png"></p>
+<p>将你申请的证书*.key以及*.pem内容，粘贴进去然后保存，然后点击窗口右上角的<code>强制HTTPS</code>即可。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">重明</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kkkiiinnn.cn/archives/eec84211.html">https://kkkiiinnn.cn/archives/eec84211.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kkkiiinnn.cn" target="_blank">洪荒部落</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91-%E6%9C%8D%E5%8A%A1%E5%99%A8/">阿里云 服务器</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-BG.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/55fb420e.html"><img class="prev-cover" src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/Mi4-post.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">小米4官方历史刷机包整合</div></div></a></div><div class="next-post pull-right"><a href="/archives/66387254.html"><img class="next-cover" src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-post.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Windows10安装教程</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">重明</div><div class="author-info__description">永远相信美好的事情即将发生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KKKIIINNN"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/KKKIIINNN" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:211560569@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E6%95%99%E7%A8%8B%E5%9F%BA%E4%BA%8E%E9%98%BF%E9%87%8C%E4%BA%91%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E7%B3%BB%E7%BB%9F%E4%B8%BAAliyunLinux"><span class="toc-number">1.</span> <span class="toc-text">本教程基于阿里云轻量应用服务器，系统为AliyunLinux</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%85%8D%E7%BD%AE-Git"><span class="toc-number">2.</span> <span class="toc-text">一、配置 Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85-git"><span class="toc-number">2.1.</span> <span class="toc-text">1、安装 git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA-git-%E8%B4%A6%E6%88%B7"><span class="toc-number">2.2.</span> <span class="toc-text">2、创建 git 账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%B7%BB%E5%8A%A0-git-%E8%B4%A6%E6%88%B7%E6%9D%83%E9%99%90"><span class="toc-number">2.3.</span> <span class="toc-text">3、添加 git 账户权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%94%B9%E5%9B%9E%E6%9D%83%E9%99%90"><span class="toc-number">2.4.</span> <span class="toc-text">4、改回权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E8%AE%BE%E7%BD%AE-git-%E5%AF%86%E7%A0%81"><span class="toc-number">2.5.</span> <span class="toc-text">5、设置 git 密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%88%87%E6%8D%A2%E8%87%B3-git-%E7%94%A8%E6%88%B7%EF%BC%8C%E5%88%9B%E5%BB%BA-ssh-%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C-ssh-authorized-keys-%E6%96%87%E4%BB%B6%EF%BC%8C%E5%B9%B6%E8%B5%8B%E4%BA%88%E7%9B%B8%E5%BA%94%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-number">2.6.</span> <span class="toc-text">6、切换至 git 用户，创建 ~&#x2F;.ssh 文件夹和 ~&#x2F;.ssh&#x2F;authorized_keys 文件，并赋予相应的权限</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E7%9B%AE%E5%BD%95%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">二、创建仓库目录及相关配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95"><span class="toc-number">3.1.</span> <span class="toc-text">1、创建目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE-Nginx"><span class="toc-number">3.2.</span> <span class="toc-text">2、配置 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E4%BF%AE%E6%94%B9-hexo-%E9%85%8D%E7%BD%AE"><span class="toc-number">3.3.</span> <span class="toc-text">3、修改 hexo 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%B0%86%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0-https-%E8%AE%BF%E9%97%AE"><span class="toc-number">3.4.</span> <span class="toc-text">4、将网站添加 https 访问</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_systick.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32-SysTick-系统定时器"/></a><div class="content"><a class="title" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器">STM32-SysTick-系统定时器</a><time datetime="2021-05-26T14:47:22.000Z" title="发表于 2021-05-26 22:47:22">2021-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/fa6dc41a.html" title="STM32中断应用概览"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/stm32_exti.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32中断应用概览"/></a><div class="content"><a class="title" href="/archives/fa6dc41a.html" title="STM32中断应用概览">STM32中断应用概览</a><time datetime="2021-05-25T13:11:51.000Z" title="发表于 2021-05-25 21:11:51">2021-05-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WSL+Terminus打造Windows终端"/></a><div class="content"><a class="title" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端">WSL+Terminus打造Windows终端</a><time datetime="2021-03-03T04:08:41.000Z" title="发表于 2021-03-03 12:08:41">2021-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/d1527295.html" title="小米10官方历史刷机包整合"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/Mi4-post.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米10官方历史刷机包整合"/></a><div class="content"><a class="title" href="/archives/d1527295.html" title="小米10官方历史刷机包整合">小米10官方历史刷机包整合</a><time datetime="2021-02-23T09:58:56.000Z" title="发表于 2021-02-23 17:58:56">2021-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/55fb420e.html" title="小米4官方历史刷机包整合"><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/Mi4-post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米4官方历史刷机包整合"/></a><div class="content"><a class="title" href="/archives/55fb420e.html" title="小米4官方历史刷机包整合">小米4官方历史刷机包整合</a><time datetime="2021-02-23T08:35:01.000Z" title="发表于 2021-02-23 16:35:01">2021-02-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By 重明</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/"><span>皖ICP备2020014766号-1</span></a><br/><a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34012402000325"><img class="icp-icon" src="/img/icp.png"><span>皖公网安备 34012402000325号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body></html>
