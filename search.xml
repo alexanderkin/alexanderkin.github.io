@@ -153,6 +153,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows10安装教程</title>
+    <url>/archives/66387254.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h1><h3 id="1、一个8G或8G以上容量的U盘"><a href="#1、一个8G或8G以上容量的U盘" class="headerlink" title="1、一个8G或8G以上容量的U盘"></a>1、一个8G或8G以上容量的U盘</h3><p>注意提前备份好U盘上的文件，制作启动盘时会格式化里面的文件</p>
+<h3 id="2、PE制作软件"><a href="#2、PE制作软件" class="headerlink" title="2、PE制作软件"></a>2、PE制作软件</h3><p>推荐<a href="https://www.upe.net/">优启通</a>和<a href="http://www.wepe.com.cn/">WePE工具箱</a></p>
+<h3 id="3、Windows10-ISO镜像"><a href="#3、Windows10-ISO镜像" class="headerlink" title="3、Windows10 ISO镜像"></a>3、Windows10 ISO镜像</h3><p>给大家推荐一个下载<a href="http://msdn.itellyou.cn/">Windows系统</a>的网址，在百度上搜索<code>Win10</code>系统下载，很多都不是微软原版的，并集成了很多常用软件或垃圾软件进去，<code>MSDN</code>网站里是原版未经修改的<code>Windows</code>系统，它里面的资源很多，包括操作系统和<code>Office</code>软件。注意下载操作系统前，先查看自己的电脑是32位还是64位，下载对应的操作系统，保证系统和电脑硬件匹配以发挥最好的性能，<code>x86</code>对应32位，<code>x64</code>对应64位。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-1.png"></p>
+<h1 id="二、制作启动盘"><a href="#二、制作启动盘" class="headerlink" title="二、制作启动盘"></a>二、制作启动盘</h1><p>打开优启通，按截图操作即可。（制作前请关闭杀毒软件，防止制作失败）</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-2.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-3.png"></p>
+<h1 id="三、进入PE系统"><a href="#三、进入PE系统" class="headerlink" title="三、进入PE系统"></a>三、进入PE系统</h1><h3 id="1、开机按ESC（华硕）键进入Boot-Menu"><a href="#1、开机按ESC（华硕）键进入Boot-Menu" class="headerlink" title="1、开机按ESC（华硕）键进入Boot Menu"></a>1、开机按ESC（华硕）键进入Boot Menu</h3><p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-4.jpg"></p>
+<p>附：各品牌电脑启动热键</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-5.png"></p>
+<h3 id="2、选择从你的U盘启动"><a href="#2、选择从你的U盘启动" class="headerlink" title="2、选择从你的U盘启动"></a>2、选择从你的U盘启动</h3><p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-6.jpg"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-7.png"></p>
+<h1 id="四、开始安装"><a href="#四、开始安装" class="headerlink" title="四、开始安装"></a>四、开始安装</h1><h2 id="1、硬盘分区"><a href="#1、硬盘分区" class="headerlink" title="1、硬盘分区"></a>1、硬盘分区</h2><p>打开桌面上的DG软件按截图操作</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-8.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-9.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-10.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-11.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-12.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-13.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-14.png"></p>
+<h2 id="2、安装系统"><a href="#2、安装系统" class="headerlink" title="2、安装系统"></a>2、安装系统</h2><p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-15.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-16.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-17.png"></p>
+<h1 id="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"><a href="#至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。" class="headerlink" title="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"></a>至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。</h1>]]></content>
+      <tags>
+        <tag>Windows10 教程 安装</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WSL+Terminus打造Windows终端</title>
     <url>/archives/ac0afcb5.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="WSL"><a href="#WSL" class="headerlink" title="WSL"></a>WSL</h1><p>适用于 <code>Linux </code>的 <code>Win­dows</code> 子系统（英语：<code>Win­dows Sub­sys­tem for Linux</code>，简称 <code>WSL</code>）是一个为在 <code>Win­dows 10</code> 和 <code>Win­dows Server 2019</code> 上能够原生运行 <code>Linux</code> 二进制可执行文件（<code>ELF</code> 格式）的兼容层。（<a href="https://zh.wikipedia.org/wiki/%E9%80%82%E7%94%A8%E4%BA%8ELinux%E7%9A%84Windows%E5%AD%90%E7%B3%BB%E7%BB%9F">维基百科</a>）</p>
@@ -234,34 +265,118 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title>Windows10安装教程</title>
-    <url>/archives/66387254.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h1><h3 id="1、一个8G或8G以上容量的U盘"><a href="#1、一个8G或8G以上容量的U盘" class="headerlink" title="1、一个8G或8G以上容量的U盘"></a>1、一个8G或8G以上容量的U盘</h3><p>注意提前备份好U盘上的文件，制作启动盘时会格式化里面的文件</p>
-<h3 id="2、PE制作软件"><a href="#2、PE制作软件" class="headerlink" title="2、PE制作软件"></a>2、PE制作软件</h3><p>推荐<a href="https://www.upe.net/">优启通</a>和<a href="http://www.wepe.com.cn/">WePE工具箱</a></p>
-<h3 id="3、Windows10-ISO镜像"><a href="#3、Windows10-ISO镜像" class="headerlink" title="3、Windows10 ISO镜像"></a>3、Windows10 ISO镜像</h3><p>给大家推荐一个下载<a href="http://msdn.itellyou.cn/">Windows系统</a>的网址，在百度上搜索<code>Win10</code>系统下载，很多都不是微软原版的，并集成了很多常用软件或垃圾软件进去，<code>MSDN</code>网站里是原版未经修改的<code>Windows</code>系统，它里面的资源很多，包括操作系统和<code>Office</code>软件。注意下载操作系统前，先查看自己的电脑是32位还是64位，下载对应的操作系统，保证系统和电脑硬件匹配以发挥最好的性能，<code>x86</code>对应32位，<code>x64</code>对应64位。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-1.png"></p>
-<h1 id="二、制作启动盘"><a href="#二、制作启动盘" class="headerlink" title="二、制作启动盘"></a>二、制作启动盘</h1><p>打开优启通，按截图操作即可。（制作前请关闭杀毒软件，防止制作失败）</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-2.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-3.png"></p>
-<h1 id="三、进入PE系统"><a href="#三、进入PE系统" class="headerlink" title="三、进入PE系统"></a>三、进入PE系统</h1><h3 id="1、开机按ESC（华硕）键进入Boot-Menu"><a href="#1、开机按ESC（华硕）键进入Boot-Menu" class="headerlink" title="1、开机按ESC（华硕）键进入Boot Menu"></a>1、开机按ESC（华硕）键进入Boot Menu</h3><p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-4.jpg"></p>
-<p>附：各品牌电脑启动热键</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-5.png"></p>
-<h3 id="2、选择从你的U盘启动"><a href="#2、选择从你的U盘启动" class="headerlink" title="2、选择从你的U盘启动"></a>2、选择从你的U盘启动</h3><p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-6.jpg"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-7.png"></p>
-<h1 id="四、开始安装"><a href="#四、开始安装" class="headerlink" title="四、开始安装"></a>四、开始安装</h1><h2 id="1、硬盘分区"><a href="#1、硬盘分区" class="headerlink" title="1、硬盘分区"></a>1、硬盘分区</h2><p>打开桌面上的DG软件按截图操作</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-8.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-9.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-10.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-11.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-12.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-13.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-14.png"></p>
-<h2 id="2、安装系统"><a href="#2、安装系统" class="headerlink" title="2、安装系统"></a>2、安装系统</h2><p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-15.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-16.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/W-17.png"></p>
-<h1 id="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"><a href="#至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。" class="headerlink" title="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"></a>至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。</h1>]]></content>
+    <title>将博客部署到自己的服务器</title>
+    <url>/archives/eec84211.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"><a href="#本教程基于阿里云轻量应用服务器，系统为AliyunLinux" class="headerlink" title="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"></a>本教程基于阿里云轻量应用服务器，系统为<code>AliyunLinux</code></h1><h1 id="一、配置-Git"><a href="#一、配置-Git" class="headerlink" title="一、配置 Git"></a>一、配置 Git</h1><h2 id="1、安装-git"><a href="#1、安装-git" class="headerlink" title="1、安装 git"></a>1、安装 git</h2><p>用 <code>Xshell</code> 或其他工具连接到服务器，在命令框输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+
+<p>等待安装完成。</p>
+<h2 id="2、创建-git-账户"><a href="#2、创建-git-账户" class="headerlink" title="2、创建 git 账户"></a>2、创建 git 账户</h2><p>在命令框输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">adduser git</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、添加-git-账户权限"><a href="#3、添加-git-账户权限" class="headerlink" title="3、添加 git 账户权限"></a>3、添加 git 账户权限</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 740 /etc/sudoers</span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<p>按回车之后，进入编辑界面</p>
+<p>先按i键进入编辑模式，然后找到如下内容</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-1.png"></p>
+<p>添加以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git     ALL=(ALL)     ALL</span><br></pre></td></tr></table></figure>
+
+<p>然后按 “<code>Esc</code>” 键，此时最底下的<code>—INSERT—</code>消失，再输入 “<code>:wq</code>”，即保存退出。</p>
+<h2 id="4、改回权限"><a href="#4、改回权限" class="headerlink" title="4、改回权限"></a>4、改回权限</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 400 /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、设置-git-密码"><a href="#5、设置-git-密码" class="headerlink" title="5、设置 git 密码"></a>5、设置 git 密码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo passwd git</span><br></pre></td></tr></table></figure>
+
+<p>输入两次密码就设置成功了。注意，<code>Linux</code>下输入密码是不显示****的，你直接输入，输完回车就行了。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-2.png"></p>
+<h2 id="6、切换至-git-用户，创建-ssh-文件夹和-ssh-authorized-keys-文件，并赋予相应的权限"><a href="#6、切换至-git-用户，创建-ssh-文件夹和-ssh-authorized-keys-文件，并赋予相应的权限" class="headerlink" title="6、切换至 git 用户，创建 ~/.ssh 文件夹和 ~/.ssh/authorized_keys 文件，并赋予相应的权限"></a>6、切换至 git 用户，创建 <code>~/.ssh</code> 文件夹和 <code>~/.ssh/authorized_keys</code> 文件，并赋予相应的权限</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">su git</span><br><span class="line">mkdir ~/.ssh</span><br><span class="line">vim ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>按”i”进入编辑模式，将我们在win10中生成的<code>id_rsa.pub</code>文件中的公钥复制到<code>authorized_keys</code>中，按”esc”，然后按”:wq”，保存退出。</p>
+<p>接着，输入一下命令，赋予权限</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 600 /home/git/.ssh/authorized_keys</span><br><span class="line">chmod 700 /home/git/.ssh</span><br></pre></td></tr></table></figure>
+
+<p>在本地Git终端中测试是否能免密登录git，在本地Git终端中输入以下命令，其中SERVER填写自己的云主机ip，执行输入yes后不用密码说明配置成功了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -v git@你的服务器ip</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、创建仓库目录及相关配置"><a href="#二、创建仓库目录及相关配置" class="headerlink" title="二、创建仓库目录及相关配置"></a>二、创建仓库目录及相关配置</h1><h2 id="1、创建目录"><a href="#1、创建目录" class="headerlink" title="1、创建目录"></a>1、创建目录</h2><p>在<code>var</code>目录下创建<code>repo</code>作为Git仓库目录，返回服务端命令行切换到<code>root</code>账户，然后输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir /var/repo</span><br></pre></td></tr></table></figure>
+
+<p>赋予权限：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R git:git /var/repo</span><br><span class="line">chmod -R 755 /var/repo</span><br></pre></td></tr></table></figure>
+
+<p>接下来创建<code>hexo</code>目录作为网站根目录，并赋予权限：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir /var/hexo</span><br><span class="line">chown -R git:git /var/hexo</span><br><span class="line">chmod -R 755 /var/hexo</span><br></pre></td></tr></table></figure>
+
+<p>接下来创建一个空白的<code>git</code>仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /var/repo</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
+
+<p>创建一个新的<code>Git</code>钩子，用于自动部署.</p>
+<p>在 <code>/var/repo/hexo.git</code>下，有一个自动生成的<code>hooks</code>文件夹。我们需要在里边新建一个新的钩子文件 <code>post-receive</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /var/repo/hexo.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<p>进入编辑模式，然后将下面那两行代码粘贴进去，保存退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/var/hexo --git-dir=/var/repo/hexo.git checkout -f</span><br></pre></td></tr></table></figure>
+
+<p>修改权限：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R git:git /var/repo/hexo.git/hooks/post-receive</span><br><span class="line">chmod +x /var/repo/hexo.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<p>到这里<code>Git</code>仓库已经搭建完毕了。</p>
+<h2 id="2、配置-Nginx"><a href="#2、配置-Nginx" class="headerlink" title="2、配置 Nginx"></a>2、配置 Nginx</h2><p>为了部署和维护，我们使用宝塔面板来一键部署<code>Nginx</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+
+<p>中途输入”y”回车等待一会就好了。在执行结果最后会出现地址，用户名，密码等。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-3.png"></p>
+<p>复制这个地址打开，输入账号密码即可进入宝塔面板。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-4.png"></p>
+<p>注意：这里也有可能你进不去面板页面，是因为你的服务器没有开<code>8888</code>这个端口（具体看你的宝塔面板连接的端口），去阿里云轻量服务器控制台中的“安全”-&gt;“防火墙”，右上角的”添加规则”，添加相应的端口即可。看下面的第二张图。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-5.png"></p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-6.png"></p>
+<p>另外如果忘记了宝塔用户名密码，可以去这里查看解决方案，链接<a href="https://www.bt.cn/bbs/thread-1172-1-1.html"><code>忘记Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案</code></a></p>
+<p>进入面板之后，会提示叫你修改端口，点击”立即修改”,可以看到”面板端口”这时候是<code>8888</code>，自己选一个值，然后先去服务器防火墙上开放这个端口，跟刚刚的”添加规则”操作一样。</p>
+<p>再回到宝塔面板页面将”面板端口”的值修改成你刚刚开放的端口值。</p>
+<p>然后需要用新端口，重新进入宝塔面板，就是将原有的链接”:”后面的值改成你的端口即可。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-7.png"></p>
+<p>在宝塔面板，进入软件商店，输入”<code>Nginx</code>”，然后搜索，安装免费的那个。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-8.png"></p>
+<p>等待部署完成。</p>
+<p>部署完成之后，点击网站，添加站点，填写你的域名，没有的话写你的服务器ip地址。其他的不要改。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-9.png"></p>
+<p>填写完之后提交，然后点击”设置”</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-10.png"></p>
+<p>点击”配置文件”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    # server_name填写你自己的域名，没有的话填ip</span><br><span class="line">    server_name hjxlog.com;</span><br><span class="line">    index index.php index.html index.htm default.php default.htm default.html;</span><br><span class="line">    # 这里root填写自己的网站根目录，修改为/var/hexo</span><br><span class="line">    root /var/hexo;</span><br></pre></td></tr></table></figure>
+
+<p>保存，然后选择“设置”-“网站目录”，将网站目录修改成以下，保存。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/var/hexo</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-11.png"></p>
+<p>回到服务器终端，重启宝塔服务，使之生效。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service bt restart</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、修改-hexo-配置"><a href="#3、修改-hexo-配置" class="headerlink" title="3、修改 hexo 配置"></a>3、修改 hexo 配置</h2><p>进入本地电脑<code>hexo</code>博客的根目录，编辑<strong>站点配置文件 _config.yml</strong>，找到deploy，修改成以下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #repo改为repo: git@你的服务器IP:/var/repo/hexo.git</span><br><span class="line">  repo: git@47.102.195.112:/var/repo/hexo.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>最后在本地终端中，输入以下命令部署</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+
+<p>这时候可能出现权限问题，导致部署到<code>git</code>失败。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-12.png"></p>
+<p>在服务器终端输入以下命令即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R git:git /var/repo/</span><br><span class="line">chown -R git:git /var/hexo/</span><br></pre></td></tr></table></figure>
+
+<p>最后再hexo d -g部署，应该就可以看到部署成功了。</p>
+<p>自此，已经将博客搬到阿里云服务器了。</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-13.jpg"></p>
+<h2 id="4、将网站添加-https-访问"><a href="#4、将网站添加-https-访问" class="headerlink" title="4、将网站添加 https 访问"></a>4、将网站添加 https 访问</h2><p>去阿里云申请一个免费的<code>SSL</code>证书，好像要备案，有点忘记了，很快就申请下来了。</p>
+<p>进入宝塔面板，”网站”，”设置”，”<code>SSL</code>“，”其他证书”</p>
+<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-14.png"></p>
+<p>将你申请的证书*.key以及*.pem内容，粘贴进去然后保存，然后点击窗口右上角的<code>强制HTTPS</code>即可。</p>
+]]></content>
       <tags>
-        <tag>Windows10 教程 安装</tag>
+        <tag>阿里云 服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -383,121 +498,6 @@
 ]]></content>
       <tags>
         <tag>博客 建站 教程 Github Coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>将博客部署到自己的服务器</title>
-    <url>/archives/eec84211.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"><a href="#本教程基于阿里云轻量应用服务器，系统为AliyunLinux" class="headerlink" title="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"></a>本教程基于阿里云轻量应用服务器，系统为<code>AliyunLinux</code></h1><h1 id="一、配置-Git"><a href="#一、配置-Git" class="headerlink" title="一、配置 Git"></a>一、配置 Git</h1><h2 id="1、安装-git"><a href="#1、安装-git" class="headerlink" title="1、安装 git"></a>1、安装 git</h2><p>用 <code>Xshell</code> 或其他工具连接到服务器，在命令框输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
-
-<p>等待安装完成。</p>
-<h2 id="2、创建-git-账户"><a href="#2、创建-git-账户" class="headerlink" title="2、创建 git 账户"></a>2、创建 git 账户</h2><p>在命令框输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">adduser git</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、添加-git-账户权限"><a href="#3、添加-git-账户权限" class="headerlink" title="3、添加 git 账户权限"></a>3、添加 git 账户权限</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 740 /etc/sudoers</span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<p>按回车之后，进入编辑界面</p>
-<p>先按i键进入编辑模式，然后找到如下内容</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-1.png"></p>
-<p>添加以下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git     ALL=(ALL)     ALL</span><br></pre></td></tr></table></figure>
-
-<p>然后按 “<code>Esc</code>” 键，此时最底下的<code>—INSERT—</code>消失，再输入 “<code>:wq</code>”，即保存退出。</p>
-<h2 id="4、改回权限"><a href="#4、改回权限" class="headerlink" title="4、改回权限"></a>4、改回权限</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 400 /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<h2 id="5、设置-git-密码"><a href="#5、设置-git-密码" class="headerlink" title="5、设置 git 密码"></a>5、设置 git 密码</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo passwd git</span><br></pre></td></tr></table></figure>
-
-<p>输入两次密码就设置成功了。注意，<code>Linux</code>下输入密码是不显示****的，你直接输入，输完回车就行了。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-2.png"></p>
-<h2 id="6、切换至-git-用户，创建-ssh-文件夹和-ssh-authorized-keys-文件，并赋予相应的权限"><a href="#6、切换至-git-用户，创建-ssh-文件夹和-ssh-authorized-keys-文件，并赋予相应的权限" class="headerlink" title="6、切换至 git 用户，创建 ~/.ssh 文件夹和 ~/.ssh/authorized_keys 文件，并赋予相应的权限"></a>6、切换至 git 用户，创建 <code>~/.ssh</code> 文件夹和 <code>~/.ssh/authorized_keys</code> 文件，并赋予相应的权限</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">su git</span><br><span class="line">mkdir ~/.ssh</span><br><span class="line">vim ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-
-<p>按”i”进入编辑模式，将我们在win10中生成的<code>id_rsa.pub</code>文件中的公钥复制到<code>authorized_keys</code>中，按”esc”，然后按”:wq”，保存退出。</p>
-<p>接着，输入一下命令，赋予权限</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 600 /home/git/.ssh/authorized_keys</span><br><span class="line">chmod 700 /home/git/.ssh</span><br></pre></td></tr></table></figure>
-
-<p>在本地Git终端中测试是否能免密登录git，在本地Git终端中输入以下命令，其中SERVER填写自己的云主机ip，执行输入yes后不用密码说明配置成功了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -v git@你的服务器ip</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、创建仓库目录及相关配置"><a href="#二、创建仓库目录及相关配置" class="headerlink" title="二、创建仓库目录及相关配置"></a>二、创建仓库目录及相关配置</h1><h2 id="1、创建目录"><a href="#1、创建目录" class="headerlink" title="1、创建目录"></a>1、创建目录</h2><p>在<code>var</code>目录下创建<code>repo</code>作为Git仓库目录，返回服务端命令行切换到<code>root</code>账户，然后输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir /var/repo</span><br></pre></td></tr></table></figure>
-
-<p>赋予权限：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R git:git /var/repo</span><br><span class="line">chmod -R 755 /var/repo</span><br></pre></td></tr></table></figure>
-
-<p>接下来创建<code>hexo</code>目录作为网站根目录，并赋予权限：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir /var/hexo</span><br><span class="line">chown -R git:git /var/hexo</span><br><span class="line">chmod -R 755 /var/hexo</span><br></pre></td></tr></table></figure>
-
-<p>接下来创建一个空白的<code>git</code>仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /var/repo</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
-
-<p>创建一个新的<code>Git</code>钩子，用于自动部署.</p>
-<p>在 <code>/var/repo/hexo.git</code>下，有一个自动生成的<code>hooks</code>文件夹。我们需要在里边新建一个新的钩子文件 <code>post-receive</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /var/repo/hexo.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
-
-<p>进入编辑模式，然后将下面那两行代码粘贴进去，保存退出。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/var/hexo --git-dir=/var/repo/hexo.git checkout -f</span><br></pre></td></tr></table></figure>
-
-<p>修改权限：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R git:git /var/repo/hexo.git/hooks/post-receive</span><br><span class="line">chmod +x /var/repo/hexo.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
-
-<p>到这里<code>Git</code>仓库已经搭建完毕了。</p>
-<h2 id="2、配置-Nginx"><a href="#2、配置-Nginx" class="headerlink" title="2、配置 Nginx"></a>2、配置 Nginx</h2><p>为了部署和维护，我们使用宝塔面板来一键部署<code>Nginx</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
-
-<p>中途输入”y”回车等待一会就好了。在执行结果最后会出现地址，用户名，密码等。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-3.png"></p>
-<p>复制这个地址打开，输入账号密码即可进入宝塔面板。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-4.png"></p>
-<p>注意：这里也有可能你进不去面板页面，是因为你的服务器没有开<code>8888</code>这个端口（具体看你的宝塔面板连接的端口），去阿里云轻量服务器控制台中的“安全”-&gt;“防火墙”，右上角的”添加规则”，添加相应的端口即可。看下面的第二张图。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-5.png"></p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-6.png"></p>
-<p>另外如果忘记了宝塔用户名密码，可以去这里查看解决方案，链接<a href="https://www.bt.cn/bbs/thread-1172-1-1.html"><code>忘记Linux 3.X/4.x/5.x/6.x 宝塔面板密码的解决方案</code></a></p>
-<p>进入面板之后，会提示叫你修改端口，点击”立即修改”,可以看到”面板端口”这时候是<code>8888</code>，自己选一个值，然后先去服务器防火墙上开放这个端口，跟刚刚的”添加规则”操作一样。</p>
-<p>再回到宝塔面板页面将”面板端口”的值修改成你刚刚开放的端口值。</p>
-<p>然后需要用新端口，重新进入宝塔面板，就是将原有的链接”:”后面的值改成你的端口即可。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-7.png"></p>
-<p>在宝塔面板，进入软件商店，输入”<code>Nginx</code>”，然后搜索，安装免费的那个。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-8.png"></p>
-<p>等待部署完成。</p>
-<p>部署完成之后，点击网站，添加站点，填写你的域名，没有的话写你的服务器ip地址。其他的不要改。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-9.png"></p>
-<p>填写完之后提交，然后点击”设置”</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-10.png"></p>
-<p>点击”配置文件”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    # server_name填写你自己的域名，没有的话填ip</span><br><span class="line">    server_name hjxlog.com;</span><br><span class="line">    index index.php index.html index.htm default.php default.htm default.html;</span><br><span class="line">    # 这里root填写自己的网站根目录，修改为/var/hexo</span><br><span class="line">    root /var/hexo;</span><br></pre></td></tr></table></figure>
-
-<p>保存，然后选择“设置”-“网站目录”，将网站目录修改成以下，保存。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/var/hexo</span><br></pre></td></tr></table></figure>
-
-
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-11.png"></p>
-<p>回到服务器终端，重启宝塔服务，使之生效。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service bt restart</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3、修改-hexo-配置"><a href="#3、修改-hexo-配置" class="headerlink" title="3、修改 hexo 配置"></a>3、修改 hexo 配置</h2><p>进入本地电脑<code>hexo</code>博客的根目录，编辑<strong>站点配置文件 _config.yml</strong>，找到deploy，修改成以下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #repo改为repo: git@你的服务器IP:/var/repo/hexo.git</span><br><span class="line">  repo: git@47.102.195.112:/var/repo/hexo.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>最后在本地终端中，输入以下命令部署</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-
-<p>这时候可能出现权限问题，导致部署到<code>git</code>失败。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-12.png"></p>
-<p>在服务器终端输入以下命令即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R git:git /var/repo/</span><br><span class="line">chown -R git:git /var/hexo/</span><br></pre></td></tr></table></figure>
-
-<p>最后再hexo d -g部署，应该就可以看到部署成功了。</p>
-<p>自此，已经将博客搬到阿里云服务器了。</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-13.jpg"></p>
-<h2 id="4、将网站添加-https-访问"><a href="#4、将网站添加-https-访问" class="headerlink" title="4、将网站添加 https 访问"></a>4、将网站添加 https 访问</h2><p>去阿里云申请一个免费的<code>SSL</code>证书，好像要备案，有点忘记了，很快就申请下来了。</p>
-<p>进入宝塔面板，”网站”，”设置”，”<code>SSL</code>“，”其他证书”</p>
-<p><img src="https://gitee.com/kkkiiinnn/blogpicture/raw/master/picture/server-14.png"></p>
-<p>将你申请的证书*.key以及*.pem内容，粘贴进去然后保存，然后点击窗口右上角的<code>强制HTTPS</code>即可。</p>
-]]></content>
-      <tags>
-        <tag>阿里云 服务器</tag>
       </tags>
   </entry>
   <entry>
