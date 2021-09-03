@@ -117,42 +117,6 @@
       </tags>
   </entry>
   <entry>
-    <title>STM32-SysTick-系统定时器</title>
-    <url>/archives/f0615bf0.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="SysTick—系统定时器"><a href="#SysTick—系统定时器" class="headerlink" title="SysTick—系统定时器"></a>SysTick—系统定时器</h1><h2 id="SysTick-简介"><a href="#SysTick-简介" class="headerlink" title="SysTick 简介"></a>SysTick 简介</h2><p>SysTick—系统定时器是属于 CM4 内核中的一个外设，内嵌在 NVIC 中。系统定时器是一个 24bit<br>的向下递减的计数器，计数器每计数一次的时间为 1/SYSCLK，一般我们设置系统时钟 SYSCLK<br>等于 180M。当重装载数值寄存器的值递减到 0 的时候，系统定时器就产生一次中断，以此循环<br>往复。<br>因为 SysTick 是属于 CM4 内核的外设，所以所有基于 CM4 内核的单片机都具有这个系统定时器，<br>使得软件在 CM4 单片机中可以很容易的移植。系统定时器一般用于操作系统，用于产生时基，维<br>持操作系统的心跳。  </p>
-<h2 id="SysTick-定时实验"><a href="#SysTick-定时实验" class="headerlink" title="SysTick 定时实验"></a>SysTick 定时实验</h2><p>1、设置重装载寄存器的值<br>2、清除当前数值寄存器的值<br>3、配置控制与状态寄存器  </p>
-<h3 id="SysTick-初始化函数"><a href="#SysTick-初始化函数" class="headerlink" title="SysTick 初始化函数"></a>SysTick 初始化函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Init(void)</span><br><span class="line">&#123;</span><br><span class="line">	if (SysTick_Config(SystemCoreClock / 100000))</span><br><span class="line">	&#123; </span><br><span class="line">		while (1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="SysTick-中断时间的计算"><a href="#SysTick-中断时间的计算" class="headerlink" title="SysTick 中断时间的计算"></a>SysTick 中断时间的计算</h3><p>SysTick 定时器的计数器是向下递减计数的，计数一次的时间 TDEC=1/CLKAHB，当重装载寄存器<br>中的值 VALUELOAD 减到 0 的时候，产生中断，可知中断一次的时间 TINT=VALUELOAD* TDEC 中断<br>= VALUELOAD/CLKAHB，其中 CLKAHB =168MHZ。如果 VALUELOAD 设置为 180，那中断一次的时<br>间 TINT=168/168M=1us。不过 1us 的中断没啥意义，整个程序的重心都花在进出中断上了，根本<br>没有时间处理其他的任务。  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SysTick_Config(SystemCoreClock / 100000))</span><br></pre></td></tr></table></figure>
-
-<p>SysTick_Config（）的形我们配置为 SystemCoreClock / 100000=180M/100000=1680，从刚刚分析我们知道这个形参的值最终是写到重装载寄存器 LOAD 中的，从而可知我们现在把 SysTick 定时器<br>中断一次的时间 TINT=1680/168M=10us。  </p>
-<h3 id="SysTick-定时时间的计算"><a href="#SysTick-定时时间的计算" class="headerlink" title="SysTick 定时时间的计算"></a>SysTick 定时时间的计算</h3><p>当设置好中断时间 TINT 后，我们可以设置一个变量 t，用来记录进入中断的次数，那么变量 t 乘<br>以中断的时间 TINT 就可以计算出需要定时的时间。  </p>
-<h3 id="SysTick-定时函数"><a href="#SysTick-定时函数" class="headerlink" title="SysTick 定时函数"></a>SysTick 定时函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void Delay_us(__IO u32 nTime)</span><br><span class="line">&#123; </span><br><span class="line">	TimingDelay = nTime;	</span><br><span class="line"></span><br><span class="line">	while(TimingDelay != 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>函数 Delay_us() 中我们等待 TimingDelay 为 0，当 TimingDelay 为 0 的时候表示延时时间到。变量<br>TimingDelay 在中断函数中递减，即 SysTick 每进一次中断即 10us 的时间 TimingDelay 递减一次。  </p>
-<h3 id="SysTick-中断服务函数"><a href="#SysTick-中断服务函数" class="headerlink" title="SysTick 中断服务函数"></a>SysTick 中断服务函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Handler(void)</span><br><span class="line">&#123;</span><br><span class="line">	TimingDelay_Decrement();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>中断复位函数调用了另外一个函数 TimingDelay_Decrement()，原型如下：  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void TimingDelay_Decrement(void)</span><br><span class="line">&#123;</span><br><span class="line">	if (TimingDelay != 0x00)</span><br><span class="line">	&#123; </span><br><span class="line">		TimingDelay--;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>TimingDelay 的值等于延时函数中传进去的 nTime 的值，比如 nTime=100000，则延时的时间等于<br>100000*10us=1s。  </p>
-<h2 id="另外一种更简洁的定时编程"><a href="#另外一种更简洁的定时编程" class="headerlink" title="另外一种更简洁的定时编程"></a>另外一种更简洁的定时编程</h2><p>上面的实验，我们是使用了中断，而且经过多个函数的调用，还使用了全局变量，理解起来挺费<br>劲的，其实还有另外一种更简洁的写法。我们知道， systick 的 counter 从 reload 值往下递减到 0 的<br>时候， CTRL 寄存器的位 16:countflag 会置 1，且读取该位的值可清 0，所有我们可以使用软件查<br>询的方法来实现延时。  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Delay_Us( __IO uint32_t us)</span><br><span class="line">&#123;</span><br><span class="line">   uint32_t i;</span><br><span class="line">   SysTick_Config(SystemCoreClock/1000000);</span><br><span class="line">   for (i=0; i&lt;us; i++) &#123;</span><br><span class="line">      // 当计数器的值减小到 0 的时候， CRTL 寄存器的位 16 会置 1</span><br><span class="line">      while ( !((SysTick-&gt;CTRL)&amp;(1&lt;&lt;16)) );</span><br><span class="line">   &#125;</span><br><span class="line">   // 关闭 SysTick 定时器</span><br><span class="line">   SysTick-&gt;CTRL &amp;=~SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Delay_Ms( __IO uint32_t ms)</span><br><span class="line">&#123;</span><br><span class="line">	uint32_t i;</span><br><span class="line">	SysTick_Config(SystemCoreClock/1000);</span><br><span class="line">	</span><br><span class="line">	for (i=0; i&lt;ms; i++) &#123;</span><br><span class="line">		// 当计数器的值减小到 0 的时候， CRTL 寄存器的位 16 会置 1</span><br><span class="line">		// 当置 1 时，读取该位会清 0</span><br><span class="line">		while ( !((SysTick-&gt;CTRL)&amp;(1&lt;&lt;16)) );</span><br><span class="line">	&#125;</span><br><span class="line">	// 关闭 SysTick 定时器</span><br><span class="line">    SysTick-&gt;CTRL &amp;=~ SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>在这两个微秒和毫秒级别的延时函数中，我们还是调用了 SysTick_Config 这个固件库函数 ，其中 SystemCoreClock 是一个宏，大小为 168000000，如果不想使用这个宏，也可以直接改成数字。  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这个 固件库函数 在 core_cm3.h 中</span><br><span class="line">static __INLINE uint32_t SysTick_Config(uint32_t ticks)</span><br><span class="line">&#123;</span><br><span class="line">	// reload 寄存器为 24bit，最大值为 2^24</span><br><span class="line">	if (ticks &gt; SysTick_LOAD_RELOAD_Msk) return (1);</span><br><span class="line">	</span><br><span class="line">	// 配置 reload 寄存器的初始值</span><br><span class="line">	SysTick-&gt;LOAD = (ticks &amp; SysTick_LOAD_RELOAD_Msk) - 1;</span><br><span class="line">	</span><br><span class="line">	// 配置中断优先级为 1&lt;&lt;4 -1 = 15，优先级为最低</span><br><span class="line">	NVIC_SetPriority (SysTick_IRQn, (1&lt;&lt;__NVIC_PRIO_BITS) - 1);</span><br><span class="line">	</span><br><span class="line">	// 配置 counter 计数器的值</span><br><span class="line">	SysTick-&gt;VAL = 0;</span><br><span class="line">	// 配置 systick 的时钟为 72M</span><br><span class="line">	// 使能中断</span><br><span class="line">	// 使能 systick</span><br><span class="line">	SysTick-&gt;CTRL = SysTick_CTRL_CLKSOURCE_Msk |</span><br><span class="line">					SysTick_CTRL_TICKINT_Msk |</span><br><span class="line">					SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">	return (0);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>STM32 SysTick 中断 定时器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WSL+Terminus打造Windows终端</title>
     <url>/archives/ac0afcb5.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="WSL"><a href="#WSL" class="headerlink" title="WSL"></a>WSL</h1><p>适用于 <code>Linux </code>的 <code>Win­dows</code> 子系统（英语：<code>Win­dows Sub­sys­tem for Linux</code>，简称 <code>WSL</code>）是一个为在 <code>Win­dows 10</code> 和 <code>Win­dows Server 2019</code> 上能够原生运行 <code>Linux</code> 二进制可执行文件（<code>ELF</code> 格式）的兼容层。（<a href="https://zh.wikipedia.org/wiki/%E9%80%82%E7%94%A8%E4%BA%8ELinux%E7%9A%84Windows%E5%AD%90%E7%B3%BB%E7%BB%9F">维基百科</a>）</p>
@@ -232,6 +196,42 @@
 </blockquote>
 <p>最后应用配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>STM32-SysTick-系统定时器</title>
+    <url>/archives/f0615bf0.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="SysTick—系统定时器"><a href="#SysTick—系统定时器" class="headerlink" title="SysTick—系统定时器"></a>SysTick—系统定时器</h1><h2 id="SysTick-简介"><a href="#SysTick-简介" class="headerlink" title="SysTick 简介"></a>SysTick 简介</h2><p>SysTick—系统定时器是属于 CM4 内核中的一个外设，内嵌在 NVIC 中。系统定时器是一个 24bit<br>的向下递减的计数器，计数器每计数一次的时间为 1/SYSCLK，一般我们设置系统时钟 SYSCLK<br>等于 180M。当重装载数值寄存器的值递减到 0 的时候，系统定时器就产生一次中断，以此循环<br>往复。<br>因为 SysTick 是属于 CM4 内核的外设，所以所有基于 CM4 内核的单片机都具有这个系统定时器，<br>使得软件在 CM4 单片机中可以很容易的移植。系统定时器一般用于操作系统，用于产生时基，维<br>持操作系统的心跳。  </p>
+<h2 id="SysTick-定时实验"><a href="#SysTick-定时实验" class="headerlink" title="SysTick 定时实验"></a>SysTick 定时实验</h2><p>1、设置重装载寄存器的值<br>2、清除当前数值寄存器的值<br>3、配置控制与状态寄存器  </p>
+<h3 id="SysTick-初始化函数"><a href="#SysTick-初始化函数" class="headerlink" title="SysTick 初始化函数"></a>SysTick 初始化函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Init(void)</span><br><span class="line">&#123;</span><br><span class="line">	if (SysTick_Config(SystemCoreClock / 100000))</span><br><span class="line">	&#123; </span><br><span class="line">		while (1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="SysTick-中断时间的计算"><a href="#SysTick-中断时间的计算" class="headerlink" title="SysTick 中断时间的计算"></a>SysTick 中断时间的计算</h3><p>SysTick 定时器的计数器是向下递减计数的，计数一次的时间 TDEC=1/CLKAHB，当重装载寄存器<br>中的值 VALUELOAD 减到 0 的时候，产生中断，可知中断一次的时间 TINT=VALUELOAD* TDEC 中断<br>= VALUELOAD/CLKAHB，其中 CLKAHB =168MHZ。如果 VALUELOAD 设置为 180，那中断一次的时<br>间 TINT=168/168M=1us。不过 1us 的中断没啥意义，整个程序的重心都花在进出中断上了，根本<br>没有时间处理其他的任务。  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SysTick_Config(SystemCoreClock / 100000))</span><br></pre></td></tr></table></figure>
+
+<p>SysTick_Config（）的形我们配置为 SystemCoreClock / 100000=180M/100000=1680，从刚刚分析我们知道这个形参的值最终是写到重装载寄存器 LOAD 中的，从而可知我们现在把 SysTick 定时器<br>中断一次的时间 TINT=1680/168M=10us。  </p>
+<h3 id="SysTick-定时时间的计算"><a href="#SysTick-定时时间的计算" class="headerlink" title="SysTick 定时时间的计算"></a>SysTick 定时时间的计算</h3><p>当设置好中断时间 TINT 后，我们可以设置一个变量 t，用来记录进入中断的次数，那么变量 t 乘<br>以中断的时间 TINT 就可以计算出需要定时的时间。  </p>
+<h3 id="SysTick-定时函数"><a href="#SysTick-定时函数" class="headerlink" title="SysTick 定时函数"></a>SysTick 定时函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void Delay_us(__IO u32 nTime)</span><br><span class="line">&#123; </span><br><span class="line">	TimingDelay = nTime;	</span><br><span class="line"></span><br><span class="line">	while(TimingDelay != 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>函数 Delay_us() 中我们等待 TimingDelay 为 0，当 TimingDelay 为 0 的时候表示延时时间到。变量<br>TimingDelay 在中断函数中递减，即 SysTick 每进一次中断即 10us 的时间 TimingDelay 递减一次。  </p>
+<h3 id="SysTick-中断服务函数"><a href="#SysTick-中断服务函数" class="headerlink" title="SysTick 中断服务函数"></a>SysTick 中断服务函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Handler(void)</span><br><span class="line">&#123;</span><br><span class="line">	TimingDelay_Decrement();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>中断复位函数调用了另外一个函数 TimingDelay_Decrement()，原型如下：  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void TimingDelay_Decrement(void)</span><br><span class="line">&#123;</span><br><span class="line">	if (TimingDelay != 0x00)</span><br><span class="line">	&#123; </span><br><span class="line">		TimingDelay--;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>TimingDelay 的值等于延时函数中传进去的 nTime 的值，比如 nTime=100000，则延时的时间等于<br>100000*10us=1s。  </p>
+<h2 id="另外一种更简洁的定时编程"><a href="#另外一种更简洁的定时编程" class="headerlink" title="另外一种更简洁的定时编程"></a>另外一种更简洁的定时编程</h2><p>上面的实验，我们是使用了中断，而且经过多个函数的调用，还使用了全局变量，理解起来挺费<br>劲的，其实还有另外一种更简洁的写法。我们知道， systick 的 counter 从 reload 值往下递减到 0 的<br>时候， CTRL 寄存器的位 16:countflag 会置 1，且读取该位的值可清 0，所有我们可以使用软件查<br>询的方法来实现延时。  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Delay_Us( __IO uint32_t us)</span><br><span class="line">&#123;</span><br><span class="line">   uint32_t i;</span><br><span class="line">   SysTick_Config(SystemCoreClock/1000000);</span><br><span class="line">   for (i=0; i&lt;us; i++) &#123;</span><br><span class="line">      // 当计数器的值减小到 0 的时候， CRTL 寄存器的位 16 会置 1</span><br><span class="line">      while ( !((SysTick-&gt;CTRL)&amp;(1&lt;&lt;16)) );</span><br><span class="line">   &#125;</span><br><span class="line">   // 关闭 SysTick 定时器</span><br><span class="line">   SysTick-&gt;CTRL &amp;=~SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void SysTick_Delay_Ms( __IO uint32_t ms)</span><br><span class="line">&#123;</span><br><span class="line">	uint32_t i;</span><br><span class="line">	SysTick_Config(SystemCoreClock/1000);</span><br><span class="line">	</span><br><span class="line">	for (i=0; i&lt;ms; i++) &#123;</span><br><span class="line">		// 当计数器的值减小到 0 的时候， CRTL 寄存器的位 16 会置 1</span><br><span class="line">		// 当置 1 时，读取该位会清 0</span><br><span class="line">		while ( !((SysTick-&gt;CTRL)&amp;(1&lt;&lt;16)) );</span><br><span class="line">	&#125;</span><br><span class="line">	// 关闭 SysTick 定时器</span><br><span class="line">    SysTick-&gt;CTRL &amp;=~ SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在这两个微秒和毫秒级别的延时函数中，我们还是调用了 SysTick_Config 这个固件库函数 ，其中 SystemCoreClock 是一个宏，大小为 168000000，如果不想使用这个宏，也可以直接改成数字。  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 这个 固件库函数 在 core_cm3.h 中</span><br><span class="line">static __INLINE uint32_t SysTick_Config(uint32_t ticks)</span><br><span class="line">&#123;</span><br><span class="line">	// reload 寄存器为 24bit，最大值为 2^24</span><br><span class="line">	if (ticks &gt; SysTick_LOAD_RELOAD_Msk) return (1);</span><br><span class="line">	</span><br><span class="line">	// 配置 reload 寄存器的初始值</span><br><span class="line">	SysTick-&gt;LOAD = (ticks &amp; SysTick_LOAD_RELOAD_Msk) - 1;</span><br><span class="line">	</span><br><span class="line">	// 配置中断优先级为 1&lt;&lt;4 -1 = 15，优先级为最低</span><br><span class="line">	NVIC_SetPriority (SysTick_IRQn, (1&lt;&lt;__NVIC_PRIO_BITS) - 1);</span><br><span class="line">	</span><br><span class="line">	// 配置 counter 计数器的值</span><br><span class="line">	SysTick-&gt;VAL = 0;</span><br><span class="line">	// 配置 systick 的时钟为 72M</span><br><span class="line">	// 使能中断</span><br><span class="line">	// 使能 systick</span><br><span class="line">	SysTick-&gt;CTRL = SysTick_CTRL_CLKSOURCE_Msk |</span><br><span class="line">					SysTick_CTRL_TICKINT_Msk |</span><br><span class="line">					SysTick_CTRL_ENABLE_Msk;</span><br><span class="line">	return (0);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>STM32 SysTick 中断 定时器</tag>
+      </tags>
   </entry>
   <entry>
     <title>Windows10安装教程</title>
