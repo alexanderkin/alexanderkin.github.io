@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FPGA学习-语法 | 洪荒部落</title><meta name="author" content="重明"><meta name="copyright" content="重明"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="FPGA学习记录一、语法1、运算符 ![[image_20211215194329.png]]  2、常用关键字 ![[image_20211215194556.png]]![[image_20211215194614.png]]  3、赋值语句 RHS：赋值等号右边的表达式或变量可以写作 RHS 表达式或 RHS 变量；   LHS： 赋值等号左边的表达式或变量可以写作 LHS 表达式或 LHS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FPGA学习-语法">
+<meta property="og:url" content="https://kkkiiinnn.cn/archives/b1c502ad.html">
+<meta property="og:site_name" content="洪荒部落">
+<meta property="og:description" content="FPGA学习记录一、语法1、运算符 ![[image_20211215194329.png]]  2、常用关键字 ![[image_20211215194556.png]]![[image_20211215194614.png]]  3、赋值语句 RHS：赋值等号右边的表达式或变量可以写作 RHS 表达式或 RHS 变量；   LHS： 赋值等号左边的表达式或变量可以写作 LHS 表达式或 LHS">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/default_cover.jpg">
+<meta property="article:published_time" content="2021-12-16T02:16:51.000Z">
+<meta property="article:modified_time" content="2021-12-16T02:18:15.493Z">
+<meta property="article:author" content="重明">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/default_cover.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kkkiiinnn.cn/archives/b1c502ad"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'FPGA学习-语法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-12-16 10:18:15'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gitee.com/alexanderkin/blogpicture/raw/master/picture/default_cover.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">洪荒部落</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">FPGA学习-语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-16T02:16:51.000Z" title="发表于 2021-12-16 10:16:51">2021-12-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-16T02:18:15.493Z" title="更新于 2021-12-16 10:18:15">2021-12-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="FPGA学习-语法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="FPGA学习记录"><a href="#FPGA学习记录" class="headerlink" title="FPGA学习记录"></a>FPGA学习记录</h1><h2 id="一、语法"><a href="#一、语法" class="headerlink" title="一、语法"></a>一、语法</h2><h3 id="1、运算符"><a href="#1、运算符" class="headerlink" title="1、运算符"></a>1、运算符</h3><blockquote>
+<p>![[image_20211215194329.png]]</p>
+</blockquote>
+<h3 id="2、常用关键字"><a href="#2、常用关键字" class="headerlink" title="2、常用关键字"></a>2、常用关键字</h3><blockquote>
+<p>![[image_20211215194556.png]]<br>![[image_20211215194614.png]]</p>
+</blockquote>
+<h3 id="3、赋值语句"><a href="#3、赋值语句" class="headerlink" title="3、赋值语句"></a>3、赋值语句</h3><ul>
+<li>RHS：赋值等号右边的表达式或变量可以写作 RHS 表达式或 RHS 变量；  </li>
+<li>LHS： 赋值等号左边的表达式或变量可以写作 LHS 表达式或 LHS 变量；</li>
+</ul>
+<h4 id="a、阻塞赋值"><a href="#a、阻塞赋值" class="headerlink" title="a、阻塞赋值"></a>a、阻塞赋值</h4><blockquote>
+<p>在同一个always中，一条阻塞赋值语句如果没有执行结束，那么该语句后面的语句就不能被执行，即被“阻塞”。也就是说 always 块内的语句是一种顺序关系，这里和 C 语言很类似。符号“=”用于阻塞的赋值(如:b = a;)， 阻塞赋值“=”在 begin 和 end 之间的语句是顺序执行，属于串行语句。</p>
+</blockquote>
+<blockquote>
+<p>阻塞赋值的执行可以认为是只有一个步骤的操作，即计算 RHS 的值并更新 LHS，此时不允许任何其他语句的干扰，所谓的阻塞的概念就是值在同一个 always 块中，其后面的赋值语句从概念上来讲是在前面一  条语句赋值完成后才执行的。</p>
+</blockquote>
+<h4 id="b、非阻塞赋值"><a href="#b、非阻塞赋值" class="headerlink" title="b、非阻塞赋值"></a>b、非阻塞赋值</h4><blockquote>
+<p>非阻塞赋值是由时钟节拍决定，在时钟上升到来时，执行赋值语句右边，然后将 begin-end 之间的所有赋值语句同时赋值到赋值语句的左边，注意：是 begin-end 之间的所有语句，一起执行，且一个时钟只执行一次，属于并行执行语句。</p>
+</blockquote>
+<blockquote>
+<p>(1) 赋值开始的时候，计算 RHS；<br>(2) 赋值结束的时候，更新 LHS。<br>所谓的非阻塞的概念是指，在计算非阻塞赋值的 RHS 以及 LHS 期间，允许其它的非阻塞赋值语句同时计算 RHS 和更新 LHS。</p>
+</blockquote>
+<h4 id="c、总结"><a href="#c、总结" class="headerlink" title="c、总结"></a>c、总结</h4><blockquote>
+<p>在描述组合逻辑电路的时候，使用阻塞赋值，比如 assign 赋值语句和不带时钟的 always 赋值语句，这种电路结构只与输入电平的变化有关系。</p>
+</blockquote>
+<blockquote>
+<p>在描述时序逻辑的时候，使用非阻塞赋值，综合成时序逻辑的电路结构，比如带时钟的 always 语句；这种电路结构往往与触发沿有关系，只有在触发沿时才可能发生赋值的变化</p>
+</blockquote>
+<h3 id="4、assign和always的区别"><a href="#4、assign和always的区别" class="headerlink" title="4、assign和always的区别"></a>4、assign和always的区别</h3><blockquote>
+<p>assign 语句和 always 语句是 Verilog 中的两个基本语句，这两个都是经常使用的语句。assign 语句使用时不能带时钟。always 语句可以带时钟， 也可以不带时钟。 在 always 不带时钟时，逻辑功能和 assign 完全一致，都是只产生组合逻辑。比较简单的组合逻辑推荐使用 assign 语句，比较复杂的组合逻辑推荐使用 always 语句。</p>
+</blockquote>
+<h3 id="5、带时钟和不带时钟的always"><a href="#5、带时钟和不带时钟的always" class="headerlink" title="5、带时钟和不带时钟的always"></a>5、带时钟和不带时钟的always</h3><blockquote>
+<p>always 语句可以带时钟， 也可以不带时钟。 在 always 不带时钟时，逻辑功能和 assign 完全一致，虽然产生的信号定义还是 reg 类型，但是该语句产生的还是组合逻辑。</p>
+</blockquote>
+<blockquote>
+<p>在 always 带时钟信号时，这个逻辑语句才能产生真正的寄存器，如下示例counter 就是真正的寄存器。</p>
+</blockquote>
+<h3 id="6、latch–锁存器"><a href="#6、latch–锁存器" class="headerlink" title="6、latch–锁存器"></a>6、latch–锁存器</h3><blockquote>
+<p>latch 是指锁存器，是一种对脉冲电平敏感的存储单元电路。锁存器和寄存器都是基本存储单元，锁存器是电平触发的存储器，寄存器是边沿触发的存储器。两者的基本功能是一样的，都可以存储数据。锁存器是组合逻辑产生的，而寄存器是在时序电路中使用，由时钟触发产生的。</p>
+</blockquote>
+<blockquote>
+<p>latch 的主要危害是会产生毛刺（glitch），这种毛刺对下一级电路是很危险的。并且其隐蔽性很强，不易查出。因此，在设计中，应尽量避免 latch 的使用。</p>
+</blockquote>
+<blockquote>
+<p>代码里面出现 latch 的两个原因是在组合逻辑中， if 或者 case 语句不完整的描述， 比如 if 缺少 else 分支，case 缺少 default 分支，导致代码在综合过程中出现了 latch。解决办法就是 if 必须带 else 分支， case 必须带default 分支。</p>
+</blockquote>
+<blockquote>
+<p>注意，只有不带时钟的 always 语句 if 或者 case 语句不完整才会产生 latch， 带时钟的语句 if或者 case 语句不完整描述不会产生 latch。</p>
+</blockquote>
+<h3 id="7、状态机"><a href="#7、状态机" class="headerlink" title="7、状态机"></a>7、状态机</h3><ul>
+<li>   Mealy 状态机：组合逻辑的输出不仅取决于当前状态，还取决于输入状态。</li>
+<li>  Moore 状态机：组合逻辑的输出只取决于当前状态。</li>
+</ul>
+<h4 id="a、Mealy状态机"><a href="#a、Mealy状态机" class="headerlink" title="a、Mealy状态机"></a>a、Mealy状态机</h4><blockquote>
+<p>米勒状态机的模型如下图所示，模型中第一个方框是指产生下一状态的组合逻辑 F， F 是当前状态和输入信号的函数，状态是否改变、如何改变，取决于组合逻辑 F 的输出；第二框图是指状态寄存器，其由一组触发器组成，用来记忆状态机当前所处的状态，状态的改变只发生在时钟的跳边沿；第三个框图是指产生输出的组合逻辑 G，状态机的输出是由输出组合逻辑 G 提供的， G 也是当前状态和输入信号的函数。</p>
+<p>![[image_20211215201938.png]]</p>
+</blockquote>
+<h4 id="b、Moore状态机"><a href="#b、Moore状态机" class="headerlink" title="b、Moore状态机"></a>b、Moore状态机</h4><blockquote>
+<p>摩尔状态机的模型如下图所示，对比米勒状态机的模型可以发现，其区别在于米勒状态机的输出由当前状态和输入条件决定的，而摩尔状态机的输出只取决于当前状态。</p>
+<p>![[image_20211215202126.png]]</p>
+</blockquote>
+<h4 id="c、三段式状态机"><a href="#c、三段式状态机" class="headerlink" title="c、三段式状态机"></a>c、三段式状态机</h4><blockquote>
+<p>使用三个 always 模块，一个 always 模块采用同步时序描述状态转移，一个 always 采用组合逻辑判断状态转移条件，描述状态转移规律，另一个 always 模块描述状态输出(可以用组合电路输出，也可以时序电路输出)。</p>
+</blockquote>
+<blockquote>
+<p>三段式状态机的基本格式是：<br>第一个 always 语句实现同步状态跳转；<br>第二个 always 语句采用组合逻辑判断状态转移条件；<br>第三个 always 语句描述状态输出(可以用组合电路输出，也可以时序电路输出)。</p>
+</blockquote>
+<h3 id="8、模块化设计"><a href="#8、模块化设计" class="headerlink" title="8、模块化设计"></a>8、模块化设计</h3><blockquote>
+<p>在进行模块化设计中，对于复杂的数字系统，我们一般采用自顶向下的设计方式。可以把系统划分成几个功能模块，每个功能模块再划分成下一层的子模块；每个模块的设计对应一个 module，一个 module 设计成一个 Verilog 程序文件。因此，对一个系统的顶层模块，我们采用结构化的设计，即顶层模块分别调用了各个功能模块。</p>
+</blockquote>
+<blockquote>
+<p>下图是模块化设计的功能框图，一般整个设计的顶层模块只做例化（调用其它模块），不做逻辑。顶层下面会有模块 A、模块 B、模块 C 等，模块 A/B/C 又可以分多个子模块实现。</p>
+<p>![[image_20211215202603.png]]</p>
+</blockquote>
+<h4 id="a、模块例化"><a href="#a、模块例化" class="headerlink" title="a、模块例化"></a>a、模块例化</h4><blockquote>
+<p>FPGA 逻辑设计中通常是一个大的模块中  包含了一个或多个功能子模块， Verilog 通过模块调用或称为模块实例化的方式来实现这些子模块与高层模  块的连接， 有利于简化每一个模块的代码，易于维护和修改。</p>
+<p>![[image_20211215202855.png]]</p>
+<p>上图右侧是例化的数码管静态显示模块，子模块名是指被例化模块的模块名，而例化模块名相当于标识，当例化多个相同模块时，可以通过例化名来识别哪一个例化，我们一般命名为“u_”+“子模块名”。信号列表中“.”之后的信号是数码管静态显示模块定义的端口信号，括号内的信号则是顶层模块声明的信号，这样就将顶层模块的信号与子模块的信号一一对应起来，同时需要注意信号的位宽要保持一致。</p>
+</blockquote>
+<h4 id="b、参数例化"><a href="#b、参数例化" class="headerlink" title="b、参数例化"></a>b、参数例化</h4><blockquote>
+<p>参数的例化是在模块例化的基础上，增加了对参数的信号定义，如下图所示：</p>
+<p>![[image_20211215203031.png]]</p>
+<p>在对参数进行例化时，在模块名的后面加上“#”，表示后面跟着的是参数列表。计时模块定义的MAX_NUM 和顶层模块的 TIME_SHOW 都是等于 25000_000，当在顶层模块定义 TIME_SHOW=12500_000时，那么子模块的 MAX_NUM 的值实际上也等于 12500_000。当然即使子模块包含参数，在做模块的例化时也可以不添加对参数的例化，这样的话，子模块的参数值等于该模块内部实际定义的值。值得一提的是， Verilog 语法中的 localparam 代表的意思同样是参数定义，用法和 parameter 基本一致，区别在于 parameter 定义的参数可以做例化，而 localparam 定义的参数是指本地参数，上层模块不可以对localparam 定义的参数做例化。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">重明</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kkkiiinnn.cn/archives/b1c502ad.html">https://kkkiiinnn.cn/archives/b1c502ad.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kkkiiinnn.cn" target="_blank">洪荒部落</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/default_cover.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/archives/f0615bf0.html"><img class="next-cover" src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/stm32_systick.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">STM32-SysTick-系统定时器</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">重明</div><div class="author-info__description">永远相信美好的事情即将发生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KKKIIINNN"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/KKKIIINNN" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:211560569@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#FPGA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">FPGA学习记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">一、语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%B8%B8%E7%94%A8%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、常用关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、赋值语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a%E3%80%81%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">a、阻塞赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b%E3%80%81%E9%9D%9E%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">b、非阻塞赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">c、总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81assign%E5%92%8Calways%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、assign和always的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%B8%A6%E6%97%B6%E9%92%9F%E5%92%8C%E4%B8%8D%E5%B8%A6%E6%97%B6%E9%92%9F%E7%9A%84always"><span class="toc-number">1.1.5.</span> <span class="toc-text">5、带时钟和不带时钟的always</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81latch%E2%80%93%E9%94%81%E5%AD%98%E5%99%A8"><span class="toc-number">1.1.6.</span> <span class="toc-text">6、latch–锁存器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-number">1.1.7.</span> <span class="toc-text">7、状态机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a%E3%80%81Mealy%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">a、Mealy状态机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b%E3%80%81Moore%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-number">1.1.7.2.</span> <span class="toc-text">b、Moore状态机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c%E3%80%81%E4%B8%89%E6%AE%B5%E5%BC%8F%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-number">1.1.7.3.</span> <span class="toc-text">c、三段式状态机</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.1.8.</span> <span class="toc-text">8、模块化设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a%E3%80%81%E6%A8%A1%E5%9D%97%E4%BE%8B%E5%8C%96"><span class="toc-number">1.1.8.1.</span> <span class="toc-text">a、模块例化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b%E3%80%81%E5%8F%82%E6%95%B0%E4%BE%8B%E5%8C%96"><span class="toc-number">1.1.8.2.</span> <span class="toc-text">b、参数例化</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/b1c502ad.html" title="FPGA学习-语法"><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FPGA学习-语法"/></a><div class="content"><a class="title" href="/archives/b1c502ad.html" title="FPGA学习-语法">FPGA学习-语法</a><time datetime="2021-12-16T02:16:51.000Z" title="发表于 2021-12-16 10:16:51">2021-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器"><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/stm32_systick.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32-SysTick-系统定时器"/></a><div class="content"><a class="title" href="/archives/f0615bf0.html" title="STM32-SysTick-系统定时器">STM32-SysTick-系统定时器</a><time datetime="2021-05-26T14:47:22.000Z" title="发表于 2021-05-26 22:47:22">2021-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/fa6dc41a.html" title="STM32中断应用概览"><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/stm32_exti.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STM32中断应用概览"/></a><div class="content"><a class="title" href="/archives/fa6dc41a.html" title="STM32中断应用概览">STM32中断应用概览</a><time datetime="2021-05-25T13:11:51.000Z" title="发表于 2021-05-25 21:11:51">2021-05-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端"><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WSL+Terminus打造Windows终端"/></a><div class="content"><a class="title" href="/archives/ac0afcb5.html" title="WSL+Terminus打造Windows终端">WSL+Terminus打造Windows终端</a><time datetime="2021-03-03T04:08:41.000Z" title="发表于 2021-03-03 12:08:41">2021-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/d1527295.html" title="小米10官方历史刷机包整合"><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/Mi4-post.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米10官方历史刷机包整合"/></a><div class="content"><a class="title" href="/archives/d1527295.html" title="小米10官方历史刷机包整合">小米10官方历史刷机包整合</a><time datetime="2021-02-23T09:58:56.000Z" title="发表于 2021-02-23 17:58:56">2021-02-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By 重明</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/"><span>皖ICP备2020014766号-1</span></a><br/><a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34012402000325"><img class="icp-icon" src="/img/icp.png"><span>皖公网安备 34012402000325号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body></html>
