@@ -260,6 +260,158 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
+    <title>Windows10安装教程</title>
+    <url>/archives/66387254.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h1><h3 id="1、一个8G或8G以上容量的U盘"><a href="#1、一个8G或8G以上容量的U盘" class="headerlink" title="1、一个8G或8G以上容量的U盘"></a>1、一个8G或8G以上容量的U盘</h3><p>注意提前备份好U盘上的文件，制作启动盘时会格式化里面的文件</p>
+<h3 id="2、PE制作软件"><a href="#2、PE制作软件" class="headerlink" title="2、PE制作软件"></a>2、PE制作软件</h3><p>推荐<a href="https://www.upe.net/">优启通</a>和<a href="http://www.wepe.com.cn/">WePE工具箱</a></p>
+<h3 id="3、Windows10-ISO镜像"><a href="#3、Windows10-ISO镜像" class="headerlink" title="3、Windows10 ISO镜像"></a>3、Windows10 ISO镜像</h3><p>给大家推荐一个下载<a href="http://msdn.itellyou.cn/">Windows系统</a>的网址，在百度上搜索<code>Win10</code>系统下载，很多都不是微软原版的，并集成了很多常用软件或垃圾软件进去，<code>MSDN</code>网站里是原版未经修改的<code>Windows</code>系统，它里面的资源很多，包括操作系统和<code>Office</code>软件。注意下载操作系统前，先查看自己的电脑是32位还是64位，下载对应的操作系统，保证系统和电脑硬件匹配以发挥最好的性能，<code>x86</code>对应32位，<code>x64</code>对应64位。</p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-1.png"></p>
+<h1 id="二、制作启动盘"><a href="#二、制作启动盘" class="headerlink" title="二、制作启动盘"></a>二、制作启动盘</h1><p>打开优启通，按截图操作即可。（制作前请关闭杀毒软件，防止制作失败）</p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-2.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-3.png"></p>
+<h1 id="三、进入PE系统"><a href="#三、进入PE系统" class="headerlink" title="三、进入PE系统"></a>三、进入PE系统</h1><h3 id="1、开机按ESC（华硕）键进入Boot-Menu"><a href="#1、开机按ESC（华硕）键进入Boot-Menu" class="headerlink" title="1、开机按ESC（华硕）键进入Boot Menu"></a>1、开机按ESC（华硕）键进入Boot Menu</h3><p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-4.jpg"></p>
+<p>附：各品牌电脑启动热键</p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-5.png"></p>
+<h3 id="2、选择从你的U盘启动"><a href="#2、选择从你的U盘启动" class="headerlink" title="2、选择从你的U盘启动"></a>2、选择从你的U盘启动</h3><p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-6.jpg"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-7.png"></p>
+<h1 id="四、开始安装"><a href="#四、开始安装" class="headerlink" title="四、开始安装"></a>四、开始安装</h1><h2 id="1、硬盘分区"><a href="#1、硬盘分区" class="headerlink" title="1、硬盘分区"></a>1、硬盘分区</h2><p>打开桌面上的DG软件按截图操作</p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-8.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-9.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-10.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-11.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-12.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-13.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-14.png"></p>
+<h2 id="2、安装系统"><a href="#2、安装系统" class="headerlink" title="2、安装系统"></a>2、安装系统</h2><p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-15.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-16.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-17.png"></p>
+<h1 id="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"><a href="#至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。" class="headerlink" title="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"></a>至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。</h1>]]></content>
+      <tags>
+        <tag>Windows10 教程 安装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/archives/4a17b156.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><span id="more"></span>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分别利用Github和Coding来搭建博客</title>
+    <url>/archives/9447ec3f.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="一、注册Github-amp-Coding"><a href="#一、注册Github-amp-Coding" class="headerlink" title="一、注册Github&amp;Coding"></a>一、注册Github&amp;Coding</h1><p>进入<a href="https://github.com/">Github</a>和<a href="https://coding.net/">Coding</a>的官网，分别注册一个账号。</p>
+<h1 id="二、环境准备"><a href="#二、环境准备" class="headerlink" title="二、环境准备"></a>二、环境准备</h1><p> 1、去<a href="https://nodejs.org/en/download/">Node.js</a>官网下载对应系统的安装包并安装。<br> 2、给npm换国内镜像源</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p> 3、安装<code>hexo</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>如果出现错误并提示没有权限操作可改用如下命令  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h1 id="三、建立本地博客"><a href="#三、建立本地博客" class="headerlink" title="三、建立本地博客"></a>三、建立本地博客</h1><p> 1、创建博客。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>2、生成本地页面并试运行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>然后打开浏览器，输入地址<code> localhost:4000</code> 即可看到效果。</p>
+<h2 id="附：主页配置blog-config-yml"><a href="#附：主页配置blog-config-yml" class="headerlink" title="附：主页配置blog/_config.yml"></a>附：主页配置<code>blog/_config.yml</code></h2><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title</td>
+<td align="center">网站标题</td>
+</tr>
+<tr>
+<td align="center">subtitle</td>
+<td align="center">网站副标题</td>
+</tr>
+<tr>
+<td align="center">description</td>
+<td align="center">网站描述</td>
+</tr>
+<tr>
+<td align="center">keywords</td>
+<td align="center">网站的关键词。使用半角逗号 , 分隔多个关键词。</td>
+</tr>
+<tr>
+<td align="center">author</td>
+<td align="center">您的名字</td>
+</tr>
+<tr>
+<td align="center">language</td>
+<td align="center">网站使用的语言</td>
+</tr>
+<tr>
+<td align="center">timezone</td>
+<td align="center">网站时区。<code>Hexo</code> 默认使用您电脑的时区。请参考 时区列表 进行设置，如 <code>America/New_York, Japan</code>, 和 <code>UTC</code> 。一般的，对于中国大陆地区可以使用 <code>Asia/Shanghai</code>。</td>
+</tr>
+</tbody></table>
+<p>更多具体参数请参考<a href="https://hexo.io/zh-cn/docs/configuration.html">官方文档</a></p>
+<h1 id="四、给Github和Coding添加SSH公钥"><a href="#四、给Github和Coding添加SSH公钥" class="headerlink" title="四、给Github和Coding添加SSH公钥"></a>四、给Github和Coding添加SSH公钥</h1><h2 id="1、生成SSH公钥"><a href="#1、生成SSH公钥" class="headerlink" title="1、生成SSH公钥"></a>1、生成SSH公钥</h2><p>你可以按如下命令来生成 <code>sshkey</code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;</span><br><span class="line"># Generating public/private rsa key pair...</span><br></pre></td></tr></table></figure>
+
+<p>按照提示完成三次回车，即可生成 <code>ssh key</code>。用记事本打开<code>C:\Users\xxx\\.ssh\id_rsa.pub</code>即可看到生成的公钥。</p>
+<h2 id="2、给Github添加SSH公钥"><a href="#2、给Github添加SSH公钥" class="headerlink" title="2、给Github添加SSH公钥"></a>2、给Github添加SSH公钥</h2><p>打开<a href="https://github.com/">Github</a>，点击右上角你的头像然后选择<code>Settings</code>，在左侧栏中找到并点击<code>SSH and GPG keys</code>，然后点击右边的<code>New SSH key</code>，将你第一步生成的<code>SSH key</code>复制进来即可。然后命令行输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>来测试是否连接成功，如果出现</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi XXX!You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>即成功连接<code>Github</code>。</p>
+<h2 id="3、给Coding添加SSH公钥"><a href="#3、给Coding添加SSH公钥" class="headerlink" title="3、给Coding添加SSH公钥"></a>3、给Coding添加SSH公钥</h2><p>打开<a href="https://coding.net/">Coding</a>，然后点击右上角你的头像然后选择<code>个人设置</code>，在左侧栏中找到并点击<code>SSH公钥</code>，，然后点击右边的<code>新增公钥</code>，将你第一步生成的<code>SSH key</code>复制进来即可。然后命令行输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@e.coding.net</span><br></pre></td></tr></table></figure>
+
+<p>来测试是否连接成功，如果出现</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Coding 提示: Hello XX, You&#x27;ve connected to Coding.net via SSH. This is a personal key.</span><br><span class="line">XX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个个人公钥.</span><br><span class="line">公钥指纹：xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx</span><br></pre></td></tr></table></figure>
+
+<p>即成功连接<code>Coding</code>。</p>
+<h1 id="五、将博客部署到Github-amp-Coding上"><a href="#五、将博客部署到Github-amp-Coding上" class="headerlink" title="五、将博客部署到Github&amp;Coding上"></a>五、将博客部署到Github&amp;Coding上</h1><p>1、在<code>Github</code>上建立一个仓库，名称为<code>用户名.github.io</code>，在<code>Coding</code>上新建一个代码托管项目，名称填<code>用户名.coding.me</code>。<br>2、安装<code>hexo-deployer-git</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>3、配置<code>blog/_config.yml</code></p>
+<p>①、单独部署到<code>Github</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:用户名/用户名.github.io.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>②、单独部署到<code>Coding</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@e.coding.net:用户名/用户名.coding.me.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>③、<code>Github&amp;Coding</code>双线部署</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:用户名/用户名.github.io.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@e.coding.net:用户名/用户名.coding.me.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>4、部署</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="六、访问博客"><a href="#六、访问博客" class="headerlink" title="六、访问博客"></a>六、访问博客</h1><h2 id="1、Github"><a href="#1、Github" class="headerlink" title="1、Github"></a>1、Github</h2><p>进入<code>Github</code>仓库，库点击 <code>Settings</code> 按钮进入仓库设置页面，滑到下面找到 <code>GitHub Pages</code> 项就会看到<code>用户名.github.io</code>，这就是你的<code>Github</code>博客网址，至此，你就可以通过<code>用户名.github.io</code>来进行访问你的博客了。</p>
+<h2 id="2、Coding"><a href="#2、Coding" class="headerlink" title="2、Coding"></a>2、Coding</h2><p><code>Coding</code> 的 <code>Pages </code>服务目前需要实名认证才可以用，实名完后需要在 <code>项目设置</code> -&gt; <code>功能开关</code> 里面打开 <code>持续集成</code> 和 <code>持续部署</code> 两项功能：</p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-1.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-2.png"></p>
+<p>然后在项目的 <code>持续部署</code> 里面就可以设置静态网站(也就是<code> Pages</code> 服务)了。</p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-3.png"></p>
+<p>点击 <code>立即发布静态网站</code>，然后填写下面的相关信息点击保存</p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-4.png"></p>
+<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-5.png"></p>
+<p>此时，<code>Coding </code>就会给我们已经设置好的访问地址，然后点击一下<code>立即部署</code> 按钮即可通过<code>Coding</code>给我们的地址来访问你的博客了。</p>
+]]></content>
+      <tags>
+        <tag>博客 建站 教程 Github Coding</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>将博客部署到自己的服务器</title>
     <url>/archives/eec84211.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"><a href="#本教程基于阿里云轻量应用服务器，系统为AliyunLinux" class="headerlink" title="本教程基于阿里云轻量应用服务器，系统为AliyunLinux"></a>本教程基于阿里云轻量应用服务器，系统为<code>AliyunLinux</code></h1><h1 id="一、配置-Git"><a href="#一、配置-Git" class="headerlink" title="一、配置 Git"></a>一、配置 Git</h1><h2 id="1、安装-git"><a href="#1、安装-git" class="headerlink" title="1、安装 git"></a>1、安装 git</h2><p>用 <code>Xshell</code> 或其他工具连接到服务器，在命令框输入</p>
@@ -375,155 +527,619 @@
       </tags>
   </entry>
   <entry>
-    <title>分别利用Github和Coding来搭建博客</title>
-    <url>/archives/9447ec3f.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="一、注册Github-amp-Coding"><a href="#一、注册Github-amp-Coding" class="headerlink" title="一、注册Github&amp;Coding"></a>一、注册Github&amp;Coding</h1><p>进入<a href="https://github.com/">Github</a>和<a href="https://coding.net/">Coding</a>的官网，分别注册一个账号。</p>
-<h1 id="二、环境准备"><a href="#二、环境准备" class="headerlink" title="二、环境准备"></a>二、环境准备</h1><p> 1、去<a href="https://nodejs.org/en/download/">Node.js</a>官网下载对应系统的安装包并安装。<br> 2、给npm换国内镜像源</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p> 3、安装<code>hexo</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>如果出现错误并提示没有权限操作可改用如下命令  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h1 id="三、建立本地博客"><a href="#三、建立本地博客" class="headerlink" title="三、建立本地博客"></a>三、建立本地博客</h1><p> 1、创建博客。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>2、生成本地页面并试运行。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>然后打开浏览器，输入地址<code> localhost:4000</code> 即可看到效果。</p>
-<h2 id="附：主页配置blog-config-yml"><a href="#附：主页配置blog-config-yml" class="headerlink" title="附：主页配置blog/_config.yml"></a>附：主页配置<code>blog/_config.yml</code></h2><table>
+    <title>小米4官方历史刷机包整合</title>
+    <url>/archives/55fb420e.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="稳定版"><a href="#稳定版" class="headerlink" title="稳定版"></a>稳定版</h1><table>
 <thead>
 <tr>
-<th align="center">参数</th>
-<th align="center">描述</th>
+<th align="center">ROM版本</th>
+<th align="center">安卓版本</th>
+<th align="center">卡刷包</th>
+<th align="center">线刷包</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">title</td>
-<td align="center">网站标题</td>
+<td align="center">MIUI10 V10.1.1.0.MXDCNFI</td>
+<td align="center">6.0</td>
+<td align="center"><a href="https://bigota.d.miui.com/V10.1.1.0.MXDCNFI/miui_MI3WMI4W_V10.1.1.0.MXDCNFI_5adf2b8422_6.0.zip">点击下载</a></td>
+<td align="center"><a href="https://bigota.d.miui.com/V10.1.1.0.MXDCNFI/cancro_images_V10.1.1.0.MXDCNFI_20181010.0000.00_6.0_cn_911b6abc33.tgz">点击下载</a></td>
 </tr>
 <tr>
-<td align="center">subtitle</td>
-<td align="center">网站副标题</td>
+<td align="center">MIUI9 V9.6.4.0.MXDCNFD</td>
+<td align="center">6.0</td>
+<td align="center"><a href="https://bigota.d.miui.com/V9.6.4.0.MXDCNFD/miui_MI3WMI4W_V9.6.4.0.MXDCNFD_2b1b779890_6.0.zip">点击下载</a></td>
+<td align="center"><a href="https://bigota.d.miui.com/V9.6.4.0.MXDCNFD/cancro_images_V9.6.4.0.MXDCNFD_20180711.0000.00_6.0_cn_d9521d1a03.tgz">点击下载</a></td>
 </tr>
 <tr>
-<td align="center">description</td>
-<td align="center">网站描述</td>
+<td align="center">MIUI9 V9.6.3.0.MXDCNFD</td>
+<td align="center">6.0</td>
+<td align="center"><a href="https://bigota.d.miui.com/V9.6.3.0.MXDCNFD/miui_MI3WMI4W_V9.6.3.0.MXDCNFD_4abe5d7d2d_6.0.zip">点击下载</a></td>
+<td align="center"><a href="https://bigota.d.miui.com/V9.6.3.0.MXDCNFD/cancro_images_V9.6.3.0.MXDCNFD_20180608.0000.00_6.0_cn_a1592b5573.tgz">点击下载</a></td>
 </tr>
 <tr>
-<td align="center">keywords</td>
-<td align="center">网站的关键词。使用半角逗号 , 分隔多个关键词。</td>
+<td align="center">MIUI9 V9.5.3.0.MXDCNFA</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.5.3.0.MXDCNFA/miui_MI3WMI4W_V9.5.3.0.MXDCNFA_1bdb4fc25c_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.5.3.0.MXDCNFA/cancro_images_V9.5.3.0.MXDCNFA_20180405.0000.00_6.0_cn_4af41bac5a.tgz">点击下载</a></td>
 </tr>
 <tr>
-<td align="center">author</td>
-<td align="center">您的名字</td>
+<td align="center">MIUI9 V9.5.1.0.MXDCNFA</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.5.1.0.MXDCNFA/miui_MI3WMI4W_V9.5.1.0.MXDCNFA_0cd1c5f42e_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.5.1.0.MXDCNFA/cancro_images_V9.5.1.0.MXDCNFA_20180227.0000.00_6.0_cn_d61f273ad5.tgz">点击下载</a></td>
 </tr>
 <tr>
-<td align="center">language</td>
-<td align="center">网站使用的语言</td>
+<td align="center">MIUI9 V9.2.3.0.MXDCNEK</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.2.3.0.MXDCNEK/miui_MI3WMI4W_V9.2.3.0.MXDCNEK_61c57ff7fe_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.2.3.0.MXDCNEK/cancro_images_V9.2.3.0.MXDCNEK_20180121.0000.00_6.0_cn_18b0d61cef.tgz">点击下载</a></td>
 </tr>
 <tr>
-<td align="center">timezone</td>
-<td align="center">网站时区。<code>Hexo</code> 默认使用您电脑的时区。请参考 时区列表 进行设置，如 <code>America/New_York, Japan</code>, 和 <code>UTC</code> 。一般的，对于中国大陆地区可以使用 <code>Asia/Shanghai</code>。</td>
+<td align="center">MIUI9 V9.2.2.0.MXDCNEK</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.2.2.0.MXDCNEK/miui_MI3WMI4W_V9.2.2.0.MXDCNEK_a529e7871d_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V9.2.2.0.MXDCNEK/cancro_images_V9.2.2.0.MXDCNEK_20171212.0000.00_6.0_cn_811ff5981b.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI8 V8.5.2.0.MXDCNED</td>
+<td align="center">6.0</td>
+<td align="center"><a href="https://bigota.d.miui.com/V8.5.2.0.MXDCNED/miui_MI3WMI4W_V8.5.2.0.MXDCNED_02bf001b1a_6.0.zip">点击下载</a></td>
+<td align="center"><a href="https://bigota.d.miui.com/V8.5.2.0.MXDCNED/cancro_images_V8.5.2.0.MXDCNED_20170626.0000.00_6.0_cn_21564ee709.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.5.6.0.MXDCNDE</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.5.6.0.MXDCNDE/miui_MI3WMI4W_V7.5.6.0.MXDCNDE_c482967815_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.5.6.0.MXDCNDE/cancro_images_V7.5.6.0.MXDCNDE_20160712.0000.26_6.0_cn_8a4f4e5d5e.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.5.5.0.MXDCNDE</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.5.5.0.MXDCNDE/miui_MI3WMI4W_V7.5.5.0.MXDCNDE_b73bf94c59_6.0.zip">点击下载</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.5.3.0.MXDCNDE</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.5.3.0.MXDCNDE/miui_MI3WMI4W_V7.5.3.0.MXDCNDE_4fe80ff0cf_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.5.3.0.MXDCNDE/cancro_images_V7.5.3.0.MXDCNDE_20160523.0000.23_6.0_cn_8ac1c98bf6.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.5.2.0.MXDCNDE</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.5.2.0.MXDCNDE/miui_MI3WMI4W_V7.5.2.0.MXDCNDE_a651d6690a_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.5.2.0.MXDCNDE/cancro_images_V7.5.2.0.MXDCNDE_20160523.0000.23_6.0_cn_ebff24efd0.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.3.3.0.MXDCNDD</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.3.3.0.MXDCNDD/miui_MI3WMI4W_V7.3.3.0.MXDCNDD_5c4d68580a_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.3.3.0.MXDCNDD/cancro_images_V7.3.3.0.MXDCNDD_20160419.0000.19_6.0_cn_be9702a353.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.3.2.0.MXDCNDD</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.3.2.0.MXDCNDD/miui_MI3WMI4W_V7.3.2.0.MXDCNDD_27d8841303_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.3.2.0.MXDCNDD/cancro_images_V7.3.2.0.MXDCNDD_20160419.0000.19_6.0_cn_65c2d18d79.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.3.1.0.MXDCNDD</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.3.1.0.MXDCNDD/miui_MI3WMI4W_V7.3.1.0.MXDCNDD_72b12f6e37_6.0.zip">点击下载</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.2.11.0.MXDCNDB</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.2.11.0.MXDCNDB/miui_MI3WMI4W_V7.2.11.0.MXDCNDB_a08d6219b1_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.2.11.0.MXDCNDB/cancro_images_V7.2.11.0.MXDCNDB_20160129.0000.14_6.0_cn_7e8ac92c86.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.2.9.0.MXDCNDB</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.2.9.0.MXDCNDB/miui_MI3WMI4W_V7.2.9.0.MXDCNDB_20dd009875_6.0.zip">点击下载</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.2.8.0.MXDCNDB</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.2.8.0.MXDCNDB/miui_MI3WMI4W_V7.2.8.0.MXDCNDB_5975c204fb_6.0.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.2.8.0.MXDCNDB/cancro_images_V7.2.8.0.MXDCNDB_20160129.0000.14_6.0_cn_d46f708ae0.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.2.7.0.MXDCNDB</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.2.7.0.MXDCNDB/miui_MI3WMI4W_V7.2.7.0.MXDCNDB_604e6c2c50_6.0.zip">点击下载</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.1.5.0.KXDCNCK</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.1.5.0.KXDCNCK/miui_MI3WMI4W_V7.1.5.0.KXDCNCK_2788662329_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.1.5.0.KXDCNCK/cancro_images_V7.1.5.0.KXDCNCK_20160125.0000.13_4.4_cn_a5eae4994d.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.1.4.0.KXDCNCK</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.1.4.0.KXDCNCK/miui_MI3WMI4W_V7.1.4.0.KXDCNCK_eccbfdf73e_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.1.4.0.KXDCNCK/cancro_images_V7.1.4.0.KXDCNCK_20160107.0000.12_4.4_cn_ee5dcb4388.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.1.3.0.KXDCNCK</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.1.3.0.KXDCNCK/miui_MI3WMI4W_V7.1.3.0.KXDCNCK_cada47461c_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.1.3.0.KXDCNCK/cancro_images_V7.1.3.0.KXDCNCK_20151209.0000.6_4.4_cn_4e21b24cc2.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI7 V7.0.5.0.KXDCNCI</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.0.5.0.KXDCNCI/miui_MI3WMI4W_V7.0.5.0.KXDCNCI_a734d69197_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V7.0.5.0.KXDCNCI/cancro_images_V7.0.5.0.KXDCNCI_20151016.0000.3_4.4_cn_d8a14d9364.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.7.4.0.KXDCNCH</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.7.4.0.KXDCNCH/miui_MI3WMI4W_V6.7.4.0.KXDCNCH_2443828cbc_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.7.4.0.KXDCNCH/cancro_images_V6.7.4.0.KXDCNCH_20150826.0000.7_4.4_cn_a75262b0ce.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.7.1.0.KXDCNCH</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.7.1.0.KXDCNCH/miui_MI3WMI4W_V6.7.1.0.KXDCNCH_139d8c5cd8_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.7.1.0.KXDCNCH/cancro_images_V6.7.1.0.KXDCNCH_20150723.0000.6_4.4_cn_71c1bf3d90.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.6.5.0.KXDCNCF</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.5.0.KXDCNCF/miui_MI3WMI4W_V6.6.5.0.KXDCNCF_2bfb3412aa_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.5.0.KXDCNCF/cancro_images_V6.6.5.0.KXDCNCF_20150721.0000.5_4.4_cn_b24531f7ce.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.6.4.0.KXDCNCF</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.4.0.KXDCNCF/miui_MI3WMI4W_V6.6.4.0.KXDCNCF_998e8ade2d_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.4.0.KXDCNCF/cancro_images_V6.6.4.0.KXDCNCF_20150721.0000.5_4.4_cn_1ae5c57e1f.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.6.3.0.KXDCNCF</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.3.0.KXDCNCF/miui_MI3WMI4W_V6.6.3.0.KXDCNCF_a22a7dd243_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.3.0.KXDCNCF/cancro_images_V6.6.3.0.KXDCNCF_20150626.0000.4_4.4_cn_6aeb07024a.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.6.2.0.KXDCNCF</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.2.0.KXDCNCF/miui_MI3WMI4W_V6.6.2.0.KXDCNCF_05e6060c08_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.6.2.0.KXDCNCF/cancro_images_V6.6.2.0.KXDCNCF_20150626.0000.4_4.4_cn_fa0b5518ce.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.5.3.0.KXDCNCD</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.5.3.0.KXDCNCD/miui_MI3WMI4W_V6.5.3.0.KXDCNCD_2ac86d2cfe_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.5.3.0.KXDCNCD/cancro_images_V6.5.3.0.KXDCNCD_4.4_cn_407fb45b13.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.5.2.0.KXDCNCD</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.5.2.0.KXDCNCD/miui_MI3WMI4W_V6.5.2.0.KXDCNCD_6e443a578c_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.5.2.0.KXDCNCD/cancro_images_V6.5.2.0.KXDCNCD_4.4_cn_50d235ac42.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.4.4.0.KXDCNCB</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.4.0.KXDCNCB/miui_MI3WMI4W_V6.4.4.0.KXDCNCB_6d3c0beea2_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.4.0.KXDCNCB/cancro_images_V6.4.4.0.KXDCNCB_4.4_cn_470cd538bc.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.4.3.0.KXDCNCB</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.3.0.KXDCNCB/miui_MI3WMI4W_V6.4.3.0.KXDCNCB_5017f19828_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.3.0.KXDCNCB/cancro_images_V6.4.3.0.KXDCNCB_4.4_cn_135f3e19ac.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.4.2.0.KXDCNCB</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.2.0.KXDCNCB/miui_MI3WMI4W_V6.4.2.0.KXDCNCB_14b0a20db2_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.2.0.KXDCNCB/cancro_images_V6.4.2.0.KXDCNCB_4.4_cn_d328efaea8.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.4.1.0.KXDCNCB</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.1.0.KXDCNCB/miui_MI3WMI4W_V6.4.1.0.KXDCNCB_5b84081360_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.4.1.0.KXDCNCB/cancro_images_V6.4.1.0.KXDCNCB_4.4_cn_4c5965a024.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.3.10.0.KXDCNBL</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.3.10.0.KXDCNBL/miui_MI3WMI4W_V6.3.10.0.KXDCNBL_3cfedb36ea_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.3.10.0.KXDCNBL/cancro_images_V6.3.10.0.KXDCNBL_4.4_cn_3248a4b333.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.3.3.0.KXDCNBL</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.3.3.0.KXDCNBL/miui_MI3WMI4W_V6.3.3.0.KXDCNBL_4bc46db87b_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.3.3.0.KXDCNBL/cancro_images_V6.3.3.0.KXDCNBL_4.4_cn_79a4df3b09.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI6 V6.1.2.0.KXDCNBJ</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.1.2.0.KXDCNBJ/miui_MI3WMI4W_V6.1.2.0.KXDCNBJ_a5a8c41552_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/V6.1.2.0.KXDCNBJ/cancro_images_V6.1.2.0.KXDCNBJ_4.4_cn_2cbb2e76e8.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI5 KXDCNBH34.0</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBH34.0/miui_MI3WMI4W_KXDCNBH34.0_86853a5e54_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBH34.0/cancro_images_KXDCNBH34.0_4.4_cn_e0a92a2a26.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI5 KXDCNBF24.0</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF24.0/miui_MI3W_KXDCNBF24.0_eeff2673a8_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF24.0/cancro_images_KXDCNBF24.0_4.4_cn_1fbb634ef8.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI5 KXDCNBF23.0</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF23.0/miui_MI3W_KXDCNBF23.0_ab98120ee0_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF23.0/cancro_images_KXDCNBF23.0_4.4_cn_91b31b38e5.tgz">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">MIUI5 KXDCNBF21.0</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF21.0/miui_MI3W_KXDCNBF21.0_c50794f254_4.4.zip">点击下载</a></td>
+<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF21.0/cancro_images_KXDCNBF21.0_4.4_cn_d4f7bd9bcf.tgz">点击下载</a></td>
 </tr>
 </tbody></table>
-<p>更多具体参数请参考<a href="https://hexo.io/zh-cn/docs/configuration.html">官方文档</a></p>
-<h1 id="四、给Github和Coding添加SSH公钥"><a href="#四、给Github和Coding添加SSH公钥" class="headerlink" title="四、给Github和Coding添加SSH公钥"></a>四、给Github和Coding添加SSH公钥</h1><h2 id="1、生成SSH公钥"><a href="#1、生成SSH公钥" class="headerlink" title="1、生成SSH公钥"></a>1、生成SSH公钥</h2><p>你可以按如下命令来生成 <code>sshkey</code>:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;</span><br><span class="line"># Generating public/private rsa key pair...</span><br></pre></td></tr></table></figure>
-
-<p>按照提示完成三次回车，即可生成 <code>ssh key</code>。用记事本打开<code>C:\Users\xxx\\.ssh\id_rsa.pub</code>即可看到生成的公钥。</p>
-<h2 id="2、给Github添加SSH公钥"><a href="#2、给Github添加SSH公钥" class="headerlink" title="2、给Github添加SSH公钥"></a>2、给Github添加SSH公钥</h2><p>打开<a href="https://github.com/">Github</a>，点击右上角你的头像然后选择<code>Settings</code>，在左侧栏中找到并点击<code>SSH and GPG keys</code>，然后点击右边的<code>New SSH key</code>，将你第一步生成的<code>SSH key</code>复制进来即可。然后命令行输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>来测试是否连接成功，如果出现</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi XXX!You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-
-<p>即成功连接<code>Github</code>。</p>
-<h2 id="3、给Coding添加SSH公钥"><a href="#3、给Coding添加SSH公钥" class="headerlink" title="3、给Coding添加SSH公钥"></a>3、给Coding添加SSH公钥</h2><p>打开<a href="https://coding.net/">Coding</a>，然后点击右上角你的头像然后选择<code>个人设置</code>，在左侧栏中找到并点击<code>SSH公钥</code>，，然后点击右边的<code>新增公钥</code>，将你第一步生成的<code>SSH key</code>复制进来即可。然后命令行输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@e.coding.net</span><br></pre></td></tr></table></figure>
-
-<p>来测试是否连接成功，如果出现</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Coding 提示: Hello XX, You&#x27;ve connected to Coding.net via SSH. This is a personal key.</span><br><span class="line">XX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个个人公钥.</span><br><span class="line">公钥指纹：xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx</span><br></pre></td></tr></table></figure>
-
-<p>即成功连接<code>Coding</code>。</p>
-<h1 id="五、将博客部署到Github-amp-Coding上"><a href="#五、将博客部署到Github-amp-Coding上" class="headerlink" title="五、将博客部署到Github&amp;Coding上"></a>五、将博客部署到Github&amp;Coding上</h1><p>1、在<code>Github</code>上建立一个仓库，名称为<code>用户名.github.io</code>，在<code>Coding</code>上新建一个代码托管项目，名称填<code>用户名.coding.me</code>。<br>2、安装<code>hexo-deployer-git</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>3、配置<code>blog/_config.yml</code></p>
-<p>①、单独部署到<code>Github</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:用户名/用户名.github.io.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>②、单独部署到<code>Coding</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@e.coding.net:用户名/用户名.coding.me.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>③、<code>Github&amp;Coding</code>双线部署</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:用户名/用户名.github.io.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@e.coding.net:用户名/用户名.coding.me.git  //复制代码仓库里的SSH地址即可</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>4、部署</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1 id="六、访问博客"><a href="#六、访问博客" class="headerlink" title="六、访问博客"></a>六、访问博客</h1><h2 id="1、Github"><a href="#1、Github" class="headerlink" title="1、Github"></a>1、Github</h2><p>进入<code>Github</code>仓库，库点击 <code>Settings</code> 按钮进入仓库设置页面，滑到下面找到 <code>GitHub Pages</code> 项就会看到<code>用户名.github.io</code>，这就是你的<code>Github</code>博客网址，至此，你就可以通过<code>用户名.github.io</code>来进行访问你的博客了。</p>
-<h2 id="2、Coding"><a href="#2、Coding" class="headerlink" title="2、Coding"></a>2、Coding</h2><p><code>Coding</code> 的 <code>Pages </code>服务目前需要实名认证才可以用，实名完后需要在 <code>项目设置</code> -&gt; <code>功能开关</code> 里面打开 <code>持续集成</code> 和 <code>持续部署</code> 两项功能：</p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-1.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-2.png"></p>
-<p>然后在项目的 <code>持续部署</code> 里面就可以设置静态网站(也就是<code> Pages</code> 服务)了。</p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-3.png"></p>
-<p>点击 <code>立即发布静态网站</code>，然后填写下面的相关信息点击保存</p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-4.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/C-5.png"></p>
-<p>此时，<code>Coding </code>就会给我们已经设置好的访问地址，然后点击一下<code>立即部署</code> 按钮即可通过<code>Coding</code>给我们的地址来访问你的博客了。</p>
+<h1 id="开发版"><a href="#开发版" class="headerlink" title="开发版"></a>开发版</h1><table>
+<thead>
+<tr>
+<th align="center">ROM版本</th>
+<th align="center">MIUI版本</th>
+<th align="center">安卓版本</th>
+<th align="center">卡刷包</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6.7.7</td>
+<td align="center">MIUI8</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.5.26/miui_MI3WMI4W_6.5.26_b0357e3e7b_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.6.30</td>
+<td align="center">MIUI8</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.6.30/miui_MI3WMI4W_6.6.30_fe421e8982_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.6.16</td>
+<td align="center">MIUI8</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.6.16/miui_MI3WMI4W_6.6.16_0474bf2df7_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.5.26</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.5.26/miui_MI3WMI4W_6.5.26_b0357e3e7b_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.5.19</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.5.19/miui_MI3WMI4W_6.5.19_570efbe771_6.0.zip"> 点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.5.12</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.5.12/miui_MI3WMI4W_6.5.12_0e3b1c0a86_6.0.zip"> 点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.5.5</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.5.5/miui_MI3WMI4W_6.5.5_fe110b4607_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.4.21</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.4.21/miui_MI3WMI4W_6.4.21_f941599b42_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.4.14</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.4.14/miui_MI3WMI4W_6.4.14_ba2465b8d5_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.4.7</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.4.7/miui_MI3WMI4W_6.4.7_c39fe4df71_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.3.31</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.3.31/miui_MI3WMI4W_6.3.31_21ac088bf5_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.3.24</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.3.24/miui_MI3WMI4W_6.3.24_da196fa995_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.3.17</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.3.17/miui_MI3WMI4W_6.3.17_c71f7723b2_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.3.10</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.3.10/miui_MI3WMI4W_6.3.10_e4ab565a90_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.3.3</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.3.3/miui_MI3WMI4W_6.3.3_9757587e7e_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.2.25</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.2.25/miui_MI3WMI4W_6.2.25_0685b75b4f_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.2.18</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.2.18/miui_MI3WMI4W_6.2.18_285175b22c_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">6.1.28</td>
+<td align="center">MIUI7</td>
+<td align="center">6.0</td>
+<td align="center"><a href="http://bigota.d.miui.com/6.1.28/miui_MI3WMI4W_6.1.28_89f24e9099_6.0.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.12.17</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.12.17/miui_MI3WMI4W_5.12.17_974fcd8f8d_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.12.11</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.12.11/miui_MI3WMI4W_5.12.11_703a24b750_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.12.4</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.12.4/miui_MI3WMI4W_5.12.4_1836e1cc3c_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.11.26</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.11.26/miui_MI3WMI4W_5.11.26_c417700044_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.11.19</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.11.19/miui_MI3WMI4W_5.11.19_3400db7a41_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.11.5</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.11.5/miui_MI3WMI4W_5.11.5_b6eddd5a2c_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.11.1</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.11.1/miui_MI3WMI4W_5.11.1_f7ae076c0e_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.10.22</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.10.22/miui_MI3WMI4W_5.10.22_184d342380_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.10.15</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.10.15/miui_MI3WMI4W_5.10.15_0e2a68df6e_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.10.8</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.10.8/miui_MI3WMI4W_5.10.8_0a27cbeb95_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.9.24</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.9.24/miui_MI3WMI4W_5.9.24_6f97f997cd_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.9.17</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.9.17/miui_MI3WMI4W_5.9.17_609e4c259d_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.9.10</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.9.10/miui_MI3WMI4W_5.9.10_2e2d59920b_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.9.1</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.9.1/miui_MI3WMI4W_5.9.1_b47b0d4fb5_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.8.27</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.8.27/miui_MI3WMI4W_5.8.27_bcff6047e4_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.8.20</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.8.20/miui_MI3WMI4W_5.8.20_013ad09d22_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.8.13</td>
+<td align="center">MIUI7</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.8.13/miui_MI3WMI4W_5.8.13_7edcc9c0ce_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.8.6</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.8.6/miui_MI3WMI4W_5.8.6_c1231781e4_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.7.31</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.7.31/miui_MI3WMI4W_5.7.31_890676db4c_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.7.23</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.7.23/miui_MI3WMI4W_5.7.23_f0362ef7da_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.7.16</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.7.16/miui_MI3WMI4W_5.7.16_04e109d168_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.7.10</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.7.10/miui_MI3WMI4W_5.7.10_d88e621fe4_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.6.25</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.6.25/miui_MI3WMI4W_5.6.25_a332f84dbc_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.6.19</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.6.19/miui_MI3WMI4W_5.6.19_872a8a9098_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.6.11</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.6.11/miui_MI3WMI4W_5.6.11_66bd982d19_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.6.4</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.6.4/miui_MI3WMI4W_5.6.4_dcfc770805_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.5.29</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.5.29/miui_MI3WMI4W_5.5.29_4842d50cea_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.5.22</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.5.22/miui_MI3WMI4W_5.5.22_6b77edea29_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.5.15</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.5.15/miui_MI3WMI4W_5.5.15_8350c2ab5e_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.5.9</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.5.9/miui_MI3WMI4W_5.5.9_eedfb7f561_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.5.1</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.5.1/miui_MI3WMI4W_5.5.1_62e1aaa364_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.4.24</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.4.24/miui_MI3WMI4W_5.4.24_5019d5ad61_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.4.17</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.4.17/miui_MI3WMI4W_5.4.17_dd8817a4c8_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">5.4.10</td>
+<td align="center">MIUI6</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/5.4.10/miui_MI3WMI4W_5.4.10_690cbe2053_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">4.8.22</td>
+<td align="center">MIUI5</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/4.8.22/miui_MI3W_4.8.22_b723725e60_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">4.8.15</td>
+<td align="center">MIUI5</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/4.8.15/miui_MI3W_4.8.15_5fb366bbbf_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">4.8.8</td>
+<td align="center">MIUI5</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/4.8.8/miui_MI3W_4.8.8_053905b364_4.4.zip">点击下载</a></td>
+</tr>
+<tr>
+<td align="center">4.8.1</td>
+<td align="center">MIUI5</td>
+<td align="center">4.4</td>
+<td align="center"><a href="http://bigota.d.miui.com/4.8.1/miui_MI3W_4.8.1_937c5959b2_4.4.zip">点击下载</a></td>
+</tr>
+</tbody></table>
 ]]></content>
       <tags>
-        <tag>博客 建站 教程 Github Coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10安装教程</title>
-    <url>/archives/66387254.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h1><h3 id="1、一个8G或8G以上容量的U盘"><a href="#1、一个8G或8G以上容量的U盘" class="headerlink" title="1、一个8G或8G以上容量的U盘"></a>1、一个8G或8G以上容量的U盘</h3><p>注意提前备份好U盘上的文件，制作启动盘时会格式化里面的文件</p>
-<h3 id="2、PE制作软件"><a href="#2、PE制作软件" class="headerlink" title="2、PE制作软件"></a>2、PE制作软件</h3><p>推荐<a href="https://www.upe.net/">优启通</a>和<a href="http://www.wepe.com.cn/">WePE工具箱</a></p>
-<h3 id="3、Windows10-ISO镜像"><a href="#3、Windows10-ISO镜像" class="headerlink" title="3、Windows10 ISO镜像"></a>3、Windows10 ISO镜像</h3><p>给大家推荐一个下载<a href="http://msdn.itellyou.cn/">Windows系统</a>的网址，在百度上搜索<code>Win10</code>系统下载，很多都不是微软原版的，并集成了很多常用软件或垃圾软件进去，<code>MSDN</code>网站里是原版未经修改的<code>Windows</code>系统，它里面的资源很多，包括操作系统和<code>Office</code>软件。注意下载操作系统前，先查看自己的电脑是32位还是64位，下载对应的操作系统，保证系统和电脑硬件匹配以发挥最好的性能，<code>x86</code>对应32位，<code>x64</code>对应64位。</p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-1.png"></p>
-<h1 id="二、制作启动盘"><a href="#二、制作启动盘" class="headerlink" title="二、制作启动盘"></a>二、制作启动盘</h1><p>打开优启通，按截图操作即可。（制作前请关闭杀毒软件，防止制作失败）</p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-2.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-3.png"></p>
-<h1 id="三、进入PE系统"><a href="#三、进入PE系统" class="headerlink" title="三、进入PE系统"></a>三、进入PE系统</h1><h3 id="1、开机按ESC（华硕）键进入Boot-Menu"><a href="#1、开机按ESC（华硕）键进入Boot-Menu" class="headerlink" title="1、开机按ESC（华硕）键进入Boot Menu"></a>1、开机按ESC（华硕）键进入Boot Menu</h3><p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-4.jpg"></p>
-<p>附：各品牌电脑启动热键</p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-5.png"></p>
-<h3 id="2、选择从你的U盘启动"><a href="#2、选择从你的U盘启动" class="headerlink" title="2、选择从你的U盘启动"></a>2、选择从你的U盘启动</h3><p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-6.jpg"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-7.png"></p>
-<h1 id="四、开始安装"><a href="#四、开始安装" class="headerlink" title="四、开始安装"></a>四、开始安装</h1><h2 id="1、硬盘分区"><a href="#1、硬盘分区" class="headerlink" title="1、硬盘分区"></a>1、硬盘分区</h2><p>打开桌面上的DG软件按截图操作</p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-8.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-9.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-10.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-11.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-12.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-13.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-14.png"></p>
-<h2 id="2、安装系统"><a href="#2、安装系统" class="headerlink" title="2、安装系统"></a>2、安装系统</h2><p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-15.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-16.png"></p>
-<p><img src="https://gitee.com/alexanderkin/blogpicture/raw/master/picture/W-17.png"></p>
-<h1 id="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"><a href="#至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。" class="headerlink" title="至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。"></a>至此，Windows10的安装部分已经结束，接下来重启进入系统安装驱动即可使用。</h1>]]></content>
-      <tags>
-        <tag>Windows10 教程 安装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/archives/4a17b156.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><span id="more"></span>
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>Hello World</tag>
+        <tag>刷机 MIUI ROM</tag>
       </tags>
   </entry>
   <entry>
@@ -1687,622 +2303,6 @@
 <td align="center">MIUI11</td>
 <td align="center">10.0</td>
 <td align="center"><a href="https://hugeota.d.miui.com/20.2.17/miui_UMI_20.2.17_d1be06b9dd_10.0.zip">点击下载</a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>刷机 MIUI ROM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>小米4官方历史刷机包整合</title>
-    <url>/archives/55fb420e.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="稳定版"><a href="#稳定版" class="headerlink" title="稳定版"></a>稳定版</h1><table>
-<thead>
-<tr>
-<th align="center">ROM版本</th>
-<th align="center">安卓版本</th>
-<th align="center">卡刷包</th>
-<th align="center">线刷包</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">MIUI10 V10.1.1.0.MXDCNFI</td>
-<td align="center">6.0</td>
-<td align="center"><a href="https://bigota.d.miui.com/V10.1.1.0.MXDCNFI/miui_MI3WMI4W_V10.1.1.0.MXDCNFI_5adf2b8422_6.0.zip">点击下载</a></td>
-<td align="center"><a href="https://bigota.d.miui.com/V10.1.1.0.MXDCNFI/cancro_images_V10.1.1.0.MXDCNFI_20181010.0000.00_6.0_cn_911b6abc33.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI9 V9.6.4.0.MXDCNFD</td>
-<td align="center">6.0</td>
-<td align="center"><a href="https://bigota.d.miui.com/V9.6.4.0.MXDCNFD/miui_MI3WMI4W_V9.6.4.0.MXDCNFD_2b1b779890_6.0.zip">点击下载</a></td>
-<td align="center"><a href="https://bigota.d.miui.com/V9.6.4.0.MXDCNFD/cancro_images_V9.6.4.0.MXDCNFD_20180711.0000.00_6.0_cn_d9521d1a03.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI9 V9.6.3.0.MXDCNFD</td>
-<td align="center">6.0</td>
-<td align="center"><a href="https://bigota.d.miui.com/V9.6.3.0.MXDCNFD/miui_MI3WMI4W_V9.6.3.0.MXDCNFD_4abe5d7d2d_6.0.zip">点击下载</a></td>
-<td align="center"><a href="https://bigota.d.miui.com/V9.6.3.0.MXDCNFD/cancro_images_V9.6.3.0.MXDCNFD_20180608.0000.00_6.0_cn_a1592b5573.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI9 V9.5.3.0.MXDCNFA</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.5.3.0.MXDCNFA/miui_MI3WMI4W_V9.5.3.0.MXDCNFA_1bdb4fc25c_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.5.3.0.MXDCNFA/cancro_images_V9.5.3.0.MXDCNFA_20180405.0000.00_6.0_cn_4af41bac5a.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI9 V9.5.1.0.MXDCNFA</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.5.1.0.MXDCNFA/miui_MI3WMI4W_V9.5.1.0.MXDCNFA_0cd1c5f42e_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.5.1.0.MXDCNFA/cancro_images_V9.5.1.0.MXDCNFA_20180227.0000.00_6.0_cn_d61f273ad5.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI9 V9.2.3.0.MXDCNEK</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.2.3.0.MXDCNEK/miui_MI3WMI4W_V9.2.3.0.MXDCNEK_61c57ff7fe_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.2.3.0.MXDCNEK/cancro_images_V9.2.3.0.MXDCNEK_20180121.0000.00_6.0_cn_18b0d61cef.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI9 V9.2.2.0.MXDCNEK</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.2.2.0.MXDCNEK/miui_MI3WMI4W_V9.2.2.0.MXDCNEK_a529e7871d_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V9.2.2.0.MXDCNEK/cancro_images_V9.2.2.0.MXDCNEK_20171212.0000.00_6.0_cn_811ff5981b.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI8 V8.5.2.0.MXDCNED</td>
-<td align="center">6.0</td>
-<td align="center"><a href="https://bigota.d.miui.com/V8.5.2.0.MXDCNED/miui_MI3WMI4W_V8.5.2.0.MXDCNED_02bf001b1a_6.0.zip">点击下载</a></td>
-<td align="center"><a href="https://bigota.d.miui.com/V8.5.2.0.MXDCNED/cancro_images_V8.5.2.0.MXDCNED_20170626.0000.00_6.0_cn_21564ee709.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.5.6.0.MXDCNDE</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.5.6.0.MXDCNDE/miui_MI3WMI4W_V7.5.6.0.MXDCNDE_c482967815_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.5.6.0.MXDCNDE/cancro_images_V7.5.6.0.MXDCNDE_20160712.0000.26_6.0_cn_8a4f4e5d5e.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.5.5.0.MXDCNDE</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.5.5.0.MXDCNDE/miui_MI3WMI4W_V7.5.5.0.MXDCNDE_b73bf94c59_6.0.zip">点击下载</a></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.5.3.0.MXDCNDE</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.5.3.0.MXDCNDE/miui_MI3WMI4W_V7.5.3.0.MXDCNDE_4fe80ff0cf_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.5.3.0.MXDCNDE/cancro_images_V7.5.3.0.MXDCNDE_20160523.0000.23_6.0_cn_8ac1c98bf6.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.5.2.0.MXDCNDE</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.5.2.0.MXDCNDE/miui_MI3WMI4W_V7.5.2.0.MXDCNDE_a651d6690a_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.5.2.0.MXDCNDE/cancro_images_V7.5.2.0.MXDCNDE_20160523.0000.23_6.0_cn_ebff24efd0.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.3.3.0.MXDCNDD</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.3.3.0.MXDCNDD/miui_MI3WMI4W_V7.3.3.0.MXDCNDD_5c4d68580a_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.3.3.0.MXDCNDD/cancro_images_V7.3.3.0.MXDCNDD_20160419.0000.19_6.0_cn_be9702a353.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.3.2.0.MXDCNDD</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.3.2.0.MXDCNDD/miui_MI3WMI4W_V7.3.2.0.MXDCNDD_27d8841303_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.3.2.0.MXDCNDD/cancro_images_V7.3.2.0.MXDCNDD_20160419.0000.19_6.0_cn_65c2d18d79.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.3.1.0.MXDCNDD</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.3.1.0.MXDCNDD/miui_MI3WMI4W_V7.3.1.0.MXDCNDD_72b12f6e37_6.0.zip">点击下载</a></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.2.11.0.MXDCNDB</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.2.11.0.MXDCNDB/miui_MI3WMI4W_V7.2.11.0.MXDCNDB_a08d6219b1_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.2.11.0.MXDCNDB/cancro_images_V7.2.11.0.MXDCNDB_20160129.0000.14_6.0_cn_7e8ac92c86.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.2.9.0.MXDCNDB</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.2.9.0.MXDCNDB/miui_MI3WMI4W_V7.2.9.0.MXDCNDB_20dd009875_6.0.zip">点击下载</a></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.2.8.0.MXDCNDB</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.2.8.0.MXDCNDB/miui_MI3WMI4W_V7.2.8.0.MXDCNDB_5975c204fb_6.0.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.2.8.0.MXDCNDB/cancro_images_V7.2.8.0.MXDCNDB_20160129.0000.14_6.0_cn_d46f708ae0.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.2.7.0.MXDCNDB</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.2.7.0.MXDCNDB/miui_MI3WMI4W_V7.2.7.0.MXDCNDB_604e6c2c50_6.0.zip">点击下载</a></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.1.5.0.KXDCNCK</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.1.5.0.KXDCNCK/miui_MI3WMI4W_V7.1.5.0.KXDCNCK_2788662329_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.1.5.0.KXDCNCK/cancro_images_V7.1.5.0.KXDCNCK_20160125.0000.13_4.4_cn_a5eae4994d.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.1.4.0.KXDCNCK</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.1.4.0.KXDCNCK/miui_MI3WMI4W_V7.1.4.0.KXDCNCK_eccbfdf73e_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.1.4.0.KXDCNCK/cancro_images_V7.1.4.0.KXDCNCK_20160107.0000.12_4.4_cn_ee5dcb4388.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.1.3.0.KXDCNCK</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.1.3.0.KXDCNCK/miui_MI3WMI4W_V7.1.3.0.KXDCNCK_cada47461c_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.1.3.0.KXDCNCK/cancro_images_V7.1.3.0.KXDCNCK_20151209.0000.6_4.4_cn_4e21b24cc2.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI7 V7.0.5.0.KXDCNCI</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.0.5.0.KXDCNCI/miui_MI3WMI4W_V7.0.5.0.KXDCNCI_a734d69197_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V7.0.5.0.KXDCNCI/cancro_images_V7.0.5.0.KXDCNCI_20151016.0000.3_4.4_cn_d8a14d9364.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.7.4.0.KXDCNCH</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.7.4.0.KXDCNCH/miui_MI3WMI4W_V6.7.4.0.KXDCNCH_2443828cbc_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.7.4.0.KXDCNCH/cancro_images_V6.7.4.0.KXDCNCH_20150826.0000.7_4.4_cn_a75262b0ce.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.7.1.0.KXDCNCH</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.7.1.0.KXDCNCH/miui_MI3WMI4W_V6.7.1.0.KXDCNCH_139d8c5cd8_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.7.1.0.KXDCNCH/cancro_images_V6.7.1.0.KXDCNCH_20150723.0000.6_4.4_cn_71c1bf3d90.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.6.5.0.KXDCNCF</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.5.0.KXDCNCF/miui_MI3WMI4W_V6.6.5.0.KXDCNCF_2bfb3412aa_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.5.0.KXDCNCF/cancro_images_V6.6.5.0.KXDCNCF_20150721.0000.5_4.4_cn_b24531f7ce.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.6.4.0.KXDCNCF</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.4.0.KXDCNCF/miui_MI3WMI4W_V6.6.4.0.KXDCNCF_998e8ade2d_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.4.0.KXDCNCF/cancro_images_V6.6.4.0.KXDCNCF_20150721.0000.5_4.4_cn_1ae5c57e1f.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.6.3.0.KXDCNCF</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.3.0.KXDCNCF/miui_MI3WMI4W_V6.6.3.0.KXDCNCF_a22a7dd243_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.3.0.KXDCNCF/cancro_images_V6.6.3.0.KXDCNCF_20150626.0000.4_4.4_cn_6aeb07024a.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.6.2.0.KXDCNCF</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.2.0.KXDCNCF/miui_MI3WMI4W_V6.6.2.0.KXDCNCF_05e6060c08_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.6.2.0.KXDCNCF/cancro_images_V6.6.2.0.KXDCNCF_20150626.0000.4_4.4_cn_fa0b5518ce.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.5.3.0.KXDCNCD</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.5.3.0.KXDCNCD/miui_MI3WMI4W_V6.5.3.0.KXDCNCD_2ac86d2cfe_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.5.3.0.KXDCNCD/cancro_images_V6.5.3.0.KXDCNCD_4.4_cn_407fb45b13.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.5.2.0.KXDCNCD</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.5.2.0.KXDCNCD/miui_MI3WMI4W_V6.5.2.0.KXDCNCD_6e443a578c_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.5.2.0.KXDCNCD/cancro_images_V6.5.2.0.KXDCNCD_4.4_cn_50d235ac42.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.4.4.0.KXDCNCB</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.4.0.KXDCNCB/miui_MI3WMI4W_V6.4.4.0.KXDCNCB_6d3c0beea2_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.4.0.KXDCNCB/cancro_images_V6.4.4.0.KXDCNCB_4.4_cn_470cd538bc.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.4.3.0.KXDCNCB</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.3.0.KXDCNCB/miui_MI3WMI4W_V6.4.3.0.KXDCNCB_5017f19828_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.3.0.KXDCNCB/cancro_images_V6.4.3.0.KXDCNCB_4.4_cn_135f3e19ac.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.4.2.0.KXDCNCB</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.2.0.KXDCNCB/miui_MI3WMI4W_V6.4.2.0.KXDCNCB_14b0a20db2_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.2.0.KXDCNCB/cancro_images_V6.4.2.0.KXDCNCB_4.4_cn_d328efaea8.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.4.1.0.KXDCNCB</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.1.0.KXDCNCB/miui_MI3WMI4W_V6.4.1.0.KXDCNCB_5b84081360_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.4.1.0.KXDCNCB/cancro_images_V6.4.1.0.KXDCNCB_4.4_cn_4c5965a024.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.3.10.0.KXDCNBL</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.3.10.0.KXDCNBL/miui_MI3WMI4W_V6.3.10.0.KXDCNBL_3cfedb36ea_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.3.10.0.KXDCNBL/cancro_images_V6.3.10.0.KXDCNBL_4.4_cn_3248a4b333.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.3.3.0.KXDCNBL</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.3.3.0.KXDCNBL/miui_MI3WMI4W_V6.3.3.0.KXDCNBL_4bc46db87b_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.3.3.0.KXDCNBL/cancro_images_V6.3.3.0.KXDCNBL_4.4_cn_79a4df3b09.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI6 V6.1.2.0.KXDCNBJ</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.1.2.0.KXDCNBJ/miui_MI3WMI4W_V6.1.2.0.KXDCNBJ_a5a8c41552_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/V6.1.2.0.KXDCNBJ/cancro_images_V6.1.2.0.KXDCNBJ_4.4_cn_2cbb2e76e8.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI5 KXDCNBH34.0</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBH34.0/miui_MI3WMI4W_KXDCNBH34.0_86853a5e54_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBH34.0/cancro_images_KXDCNBH34.0_4.4_cn_e0a92a2a26.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI5 KXDCNBF24.0</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF24.0/miui_MI3W_KXDCNBF24.0_eeff2673a8_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF24.0/cancro_images_KXDCNBF24.0_4.4_cn_1fbb634ef8.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI5 KXDCNBF23.0</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF23.0/miui_MI3W_KXDCNBF23.0_ab98120ee0_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF23.0/cancro_images_KXDCNBF23.0_4.4_cn_91b31b38e5.tgz">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">MIUI5 KXDCNBF21.0</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF21.0/miui_MI3W_KXDCNBF21.0_c50794f254_4.4.zip">点击下载</a></td>
-<td align="center"><a href="http://bigota.d.miui.com/KXDCNBF21.0/cancro_images_KXDCNBF21.0_4.4_cn_d4f7bd9bcf.tgz">点击下载</a></td>
-</tr>
-</tbody></table>
-<h1 id="开发版"><a href="#开发版" class="headerlink" title="开发版"></a>开发版</h1><table>
-<thead>
-<tr>
-<th align="center">ROM版本</th>
-<th align="center">MIUI版本</th>
-<th align="center">安卓版本</th>
-<th align="center">卡刷包</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">6.7.7</td>
-<td align="center">MIUI8</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.5.26/miui_MI3WMI4W_6.5.26_b0357e3e7b_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.6.30</td>
-<td align="center">MIUI8</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.6.30/miui_MI3WMI4W_6.6.30_fe421e8982_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.6.16</td>
-<td align="center">MIUI8</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.6.16/miui_MI3WMI4W_6.6.16_0474bf2df7_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.5.26</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.5.26/miui_MI3WMI4W_6.5.26_b0357e3e7b_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.5.19</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.5.19/miui_MI3WMI4W_6.5.19_570efbe771_6.0.zip"> 点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.5.12</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.5.12/miui_MI3WMI4W_6.5.12_0e3b1c0a86_6.0.zip"> 点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.5.5</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.5.5/miui_MI3WMI4W_6.5.5_fe110b4607_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.4.21</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.4.21/miui_MI3WMI4W_6.4.21_f941599b42_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.4.14</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.4.14/miui_MI3WMI4W_6.4.14_ba2465b8d5_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.4.7</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.4.7/miui_MI3WMI4W_6.4.7_c39fe4df71_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.3.31</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.3.31/miui_MI3WMI4W_6.3.31_21ac088bf5_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.3.24</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.3.24/miui_MI3WMI4W_6.3.24_da196fa995_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.3.17</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.3.17/miui_MI3WMI4W_6.3.17_c71f7723b2_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.3.10</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.3.10/miui_MI3WMI4W_6.3.10_e4ab565a90_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.3.3</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.3.3/miui_MI3WMI4W_6.3.3_9757587e7e_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.2.25</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.2.25/miui_MI3WMI4W_6.2.25_0685b75b4f_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.2.18</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.2.18/miui_MI3WMI4W_6.2.18_285175b22c_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">6.1.28</td>
-<td align="center">MIUI7</td>
-<td align="center">6.0</td>
-<td align="center"><a href="http://bigota.d.miui.com/6.1.28/miui_MI3WMI4W_6.1.28_89f24e9099_6.0.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.12.17</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.12.17/miui_MI3WMI4W_5.12.17_974fcd8f8d_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.12.11</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.12.11/miui_MI3WMI4W_5.12.11_703a24b750_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.12.4</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.12.4/miui_MI3WMI4W_5.12.4_1836e1cc3c_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.11.26</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.11.26/miui_MI3WMI4W_5.11.26_c417700044_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.11.19</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.11.19/miui_MI3WMI4W_5.11.19_3400db7a41_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.11.5</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.11.5/miui_MI3WMI4W_5.11.5_b6eddd5a2c_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.11.1</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.11.1/miui_MI3WMI4W_5.11.1_f7ae076c0e_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.10.22</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.10.22/miui_MI3WMI4W_5.10.22_184d342380_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.10.15</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.10.15/miui_MI3WMI4W_5.10.15_0e2a68df6e_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.10.8</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.10.8/miui_MI3WMI4W_5.10.8_0a27cbeb95_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.9.24</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.9.24/miui_MI3WMI4W_5.9.24_6f97f997cd_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.9.17</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.9.17/miui_MI3WMI4W_5.9.17_609e4c259d_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.9.10</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.9.10/miui_MI3WMI4W_5.9.10_2e2d59920b_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.9.1</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.9.1/miui_MI3WMI4W_5.9.1_b47b0d4fb5_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.8.27</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.8.27/miui_MI3WMI4W_5.8.27_bcff6047e4_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.8.20</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.8.20/miui_MI3WMI4W_5.8.20_013ad09d22_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.8.13</td>
-<td align="center">MIUI7</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.8.13/miui_MI3WMI4W_5.8.13_7edcc9c0ce_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.8.6</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.8.6/miui_MI3WMI4W_5.8.6_c1231781e4_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.7.31</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.7.31/miui_MI3WMI4W_5.7.31_890676db4c_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.7.23</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.7.23/miui_MI3WMI4W_5.7.23_f0362ef7da_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.7.16</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.7.16/miui_MI3WMI4W_5.7.16_04e109d168_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.7.10</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.7.10/miui_MI3WMI4W_5.7.10_d88e621fe4_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.6.25</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.6.25/miui_MI3WMI4W_5.6.25_a332f84dbc_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.6.19</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.6.19/miui_MI3WMI4W_5.6.19_872a8a9098_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.6.11</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.6.11/miui_MI3WMI4W_5.6.11_66bd982d19_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.6.4</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.6.4/miui_MI3WMI4W_5.6.4_dcfc770805_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.5.29</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.5.29/miui_MI3WMI4W_5.5.29_4842d50cea_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.5.22</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.5.22/miui_MI3WMI4W_5.5.22_6b77edea29_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.5.15</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.5.15/miui_MI3WMI4W_5.5.15_8350c2ab5e_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.5.9</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.5.9/miui_MI3WMI4W_5.5.9_eedfb7f561_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.5.1</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.5.1/miui_MI3WMI4W_5.5.1_62e1aaa364_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.4.24</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.4.24/miui_MI3WMI4W_5.4.24_5019d5ad61_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.4.17</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.4.17/miui_MI3WMI4W_5.4.17_dd8817a4c8_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">5.4.10</td>
-<td align="center">MIUI6</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/5.4.10/miui_MI3WMI4W_5.4.10_690cbe2053_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">4.8.22</td>
-<td align="center">MIUI5</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/4.8.22/miui_MI3W_4.8.22_b723725e60_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">4.8.15</td>
-<td align="center">MIUI5</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/4.8.15/miui_MI3W_4.8.15_5fb366bbbf_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">4.8.8</td>
-<td align="center">MIUI5</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/4.8.8/miui_MI3W_4.8.8_053905b364_4.4.zip">点击下载</a></td>
-</tr>
-<tr>
-<td align="center">4.8.1</td>
-<td align="center">MIUI5</td>
-<td align="center">4.4</td>
-<td align="center"><a href="http://bigota.d.miui.com/4.8.1/miui_MI3W_4.8.1_937c5959b2_4.4.zip">点击下载</a></td>
 </tr>
 </tbody></table>
 ]]></content>
